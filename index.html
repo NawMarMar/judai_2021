@@ -11,6 +11,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>十代のための体験型フェス</title>
 </head>
+<script>
+    (function(d) {
+        var config = {
+                kitId: 'sgp5vue',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement,
+            t = setTimeout(function() {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout),
+            tk = d.createElement("script"),
+            f = false,
+            s = d.getElementsByTagName("script")[0],
+            a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function() {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
 
 <body>
     <div class="main-visual">
@@ -69,7 +99,27 @@
         </div>
     </div>
     <main>
-        <div class="container">
+        <div class="news-wrap" id="news">
+            <div class="news-in inner">
+                <div class="news-box">
+                    <h2 class="cmn-ttl news-ttl">ニュース</h2>
+                    <div class="news-detail">
+                        <dl class="d-fl">
+                            <dt>2021.01.21</dt>
+                            <dd>サイト公開しました、サイト公開しました、サイト公開しました。</dd>
+                        </dl>
+                        <dl class="d-fl">
+                            <dt>2021.01.21</dt>
+                            <dd>サイト公開しました、</dd>
+                        </dl>
+                        <dl class="d-fl">
+                            <dt>2021.01.21</dt>
+                            <dd>サイト公開しました、サイト公開しました、サイト公開しました。</dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </main>
 
@@ -77,7 +127,7 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/slick/slick.js"></script>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/lazy-loading.js"></script>
 
