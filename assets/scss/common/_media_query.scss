@@ -1,0 +1,26 @@
+/*********************** Media query ***********************/
+
+@mixin mediaQueryPc($pcMinWidth) {
+  @media screen and (min-width: $pcMinWidth) {
+    @content;
+  }
+}
+
+@mixin mediaQuerySp($spMaxWidth) {
+  @media screen and (max-width: $spMaxWidth) {
+    @content;
+  }
+}
+
+@mixin mediaQuerySpSmall($sp-small-MaxWidth) {
+  @media screen and (max-width: $sp-small-MaxWidth) {
+    @content;
+  }
+}
+
+@mixin mediaQuerySpXs($sp-xs-MaxWidth) {
+  @media screen and (max-width: $sp-xs-MaxWidth) {
+    @content;
+  }
+}
+

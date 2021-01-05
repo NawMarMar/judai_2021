@@ -1,0 +1,114 @@
+/************************* Common *******************************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: $bodyLineHeight;
+  letter-spacing: $bodyLetterSpacing;
+  font-variant-ligatures: none;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: $main-color;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: $anchorTransition;
+  -webkit-transition: $anchorTransition;
+  -moz-transition: $anchorTransition;
+  -ms-transition: $anchorTransition;
+  -o-transition: $anchorTransition;
+}
+
+a:hover {
+  transition: $anchorHoverTransition;
+  -webkit-transition: $anchorHoverTransition;
+  -moz-transition: $anchorHoverTransition;
+  -ms-transition: $anchorHoverTransition;
+  -o-transition: $anchorHoverTransition;
+}
+
+.d-fl {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -webkit-flexbox;
+  display: -moz-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+
+/*******************  for lazy-loading ***********************/
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/*******************  for lazy-loading ***********************/
+
+.sp,
+.sp-only {
+  @include mediaQueryPc($pcMinWidth) {
+    display: none;
+  }
+  @include mediaQuerySp($spMaxWidth) {
+    display: block;
+  }
+}
+
+.pc,
+.pc-only {
+  @include mediaQueryPc($pcMinWidth) {
+    display: block;
+  }
+  @include mediaQuerySp($spMaxWidth) {
+    display: none;
+  }
+}
+
+.fade-in {
+  animation-name: ani;
+  -webkit-animation-name: ani;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
