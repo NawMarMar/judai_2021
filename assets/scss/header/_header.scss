@@ -1,4 +1,9 @@
 // ********** header ********** //
+header {
+    position: relative;
+    z-index: 99;
+}
+
 .hd-inner {
     width: 95%;
     margin: 0 auto;
@@ -11,7 +16,7 @@
 }
 
 .nav-list {
-    margin-top: 40px;
+    margin-top: 50px;
     li {
         margin: 0 5px;
         a {
