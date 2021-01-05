@@ -112,14 +112,14 @@
         background: #000;
     }
     .slick-dots li button {
-        width: 8px;
-        height: 8px;
+        width: 7px;
+        height: 7px;
     }
     .slick-dots li button:before {
         content: '';
-        width: 8px;
-        height: 8px;
-        font-size: 8px;
+        width: 7px;
+        height: 7px;
+        font-size: 7px;
         color: transparent;
         border: 1px solid #000;
         border-radius: 50%;
@@ -127,6 +127,7 @@
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
+        opacity: 1;
     }
 }
 
