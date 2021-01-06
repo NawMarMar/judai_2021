@@ -340,7 +340,7 @@
 }
 
 .cast-wrap {
-    margin: 50px 0;
+    margin: 50px 0 0;
     .cast-in {
         position: relative;
         padding-bottom: 100px;
@@ -380,5 +380,24 @@
     }
     .cast-btn {
         bottom: 0;
+    }
+}
+
+.media-wrap {
+    .media-in {
+        padding: 100px 0;
+        background: url('assets/img/media-bg.png') no-repeat center;
+        background-size: 100% 100%;
+    }
+    .media-list {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        div {
+            width: 47%;
+            margin-bottom: 20px;
+        }
     }
 }
