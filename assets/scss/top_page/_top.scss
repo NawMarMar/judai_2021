@@ -49,33 +49,9 @@
     height: 100%;
     margin: 50px auto;
     padding: 50px 0 100px;
-    background-color: $main-color;
     z-index: 99;
-    clip-path: polygon(0 0, 100% 4%, 100% 97%, 0% 100%);
-    &:before {
-        content: '';
-        position: absolute;
-        top: 2px;
-        left: 3.5px;
-        width: 99.5%;
-        height: 99.5%;
-        background-image: url('assets/img/mv-line.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-        clip-path: polygon(0 0, 100% 4%, 100% 97%, 0% 100%);
-    }
-    &:after {
-        content: '';
-        position: absolute;
-        width: 99.5%;
-        height: 99.5%;
-        top: 2px;
-        left: 3.5px;
-        clip-path: polygon(0 0, 100% 4%, 100% 97%, 0% 100%);
-        background-color: $secondary-color;
-        z-index: -1;
-    }
+    background: url('assets/img/mv-bg01.png') no-repeat center;
+    background-size: 100% 100%;
 }
 
 .info-covid {
@@ -167,28 +143,6 @@
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
         opacity: 1;
-    }
-}
-
-.mv-txt {
-    &--txt01 {
-        position: absolute;
-        max-width: 250px;
-        top: 50%;
-        left: 0;
-    }
-    &--txt02 {
-        position: absolute;
-        width: 5%;
-        top: 50%;
-        right: 0;
-    }
-    &--txt03 {
-        position: absolute;
-        width: 16%;
-        bottom: -30px;
-        left: 5%;
-        z-index: 0;
     }
 }
 
@@ -467,7 +421,7 @@
 }
 
 .partner-wrap {
-    margin: 0 0 50px;
+    margin: 0 0 100px;
     .partner-in {
         position: relative;
         max-width: 1050px;
@@ -506,6 +460,10 @@
             width: 13%;
             bottom: -60px;
             right: -65px;
+        }
+        .contact-btn {
+            width: 370px;
+            bottom: -80px;
         }
     }
 }
