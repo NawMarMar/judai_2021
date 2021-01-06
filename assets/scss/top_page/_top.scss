@@ -296,7 +296,7 @@
         dt {
             margin-right: 20px;
         }
-        &:nth-child(2) {
+        &:nth-child(2n) {
             margin-left: 10px;
             dt {
                 margin-right: 10px;
@@ -385,19 +385,86 @@
 
 .media-wrap {
     .media-in {
+        position: relative;
         padding: 100px 0;
         background: url('assets/img/media-bg.png') no-repeat center;
         background-size: 100% 100%;
+        z-index: 99;
+        .media-list {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            div {
+                width: 47%;
+                margin-bottom: 20px;
+            }
+        }
+        .girl-ico {
+            position: absolute;
+            max-width: 300px;
+            right: 0;
+            bottom: 45px;
+        }
+        .star-ico {
+            position: absolute;
+            max-width: 500px;
+            top: -22px;
+            right: -65px;
+            width: 17%;
+        }
     }
-    .media-list {
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
-        div {
-            width: 47%;
-            margin-bottom: 20px;
+}
+
+.support-wrap {
+    margin: 100px 0 50px;
+    .support-in {
+        position: relative;
+        max-width: 1050px;
+        padding: 80px;
+        background-color: #99c9c4;
+        border: 3px solid $main-color;
+        box-shadow: 5px 3px $main-color;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        box-sizing: border-box;
+        z-index: 9;
+        .sup-ttl {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        .support-list {
+            justify-content: space-between;
+            align-items: center;
+            .support-logo {
+                width: 22%;
+            }
+        }
+        .title01 {
+            position: absolute;
+            width: 36%;
+            top: -76%;
+            right: 0;
+            z-index: -1;
+        }
+        .girl-ico {
+            position: absolute;
+            width: 10%;
+            top: -100px;
+            left: 10%;
+        }
+        .icon01 {
+            position: absolute;
+            width: 10%;
+            top: -100px;
+            left: 0;
         }
     }
 }
