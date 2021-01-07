@@ -116,7 +116,7 @@
     }
     .slick-dots {
         padding: 12px 0 3px 0;
-        background: url('assets/img/dot-box.svg') no-repeat center;
+        background: url('assets/img/dot-box.png') no-repeat center;
         bottom: -70px;
         background-size: contain;
     }
@@ -463,7 +463,7 @@
             right: -65px;
         }
         .contact-btn {
-            width: 370px;
+            width: 320px;
             bottom: -80px;
         }
     }
@@ -499,8 +499,8 @@
 }
 
 .insta-wrap {
+    position: relative;
     .insta-in {
-        position: relative;
         ul {
             justify-content: space-between;
             border: 3px solid $main-color;
@@ -515,7 +515,7 @@
                         position: absolute;
                         display: block;
                         top: 0;
-                        bottom: 0;
+                        left: 0;
                         width: 100%;
                         height: 100%;
                         background-color: rgba(0, 0, 0, 0.5);
