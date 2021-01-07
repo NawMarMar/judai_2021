@@ -112,5 +112,12 @@ footer {
         display: block;
         width: 140%;
         margin-left: -10px;
+        @include mediaQuerySp($spMaxWidth) {
+            margin-left: -6px;
+        }
+    }
+    @include mediaQuerySp($spMaxWidth) {
+        width: 9%;
+        right: 5px;
     }
 }

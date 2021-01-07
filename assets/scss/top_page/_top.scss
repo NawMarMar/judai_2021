@@ -16,6 +16,9 @@
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: $secondary-color;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    @include mediaQuerySp($spMaxWidth) {
+        font-size: 30px;
+    }
 }
 
 .more-btn {
@@ -40,6 +43,10 @@
     box-shadow: inset 3px 3px 5px #fff, 3px 3px 5px rgba(0, 0, 0, 0.5);
     font-size: 18px;
     font-weight: 600;
+    @include mediaQuerySp($spMaxWidth) {
+        width: 150px;
+        font-size: 14px;
+    }
 }
 
 // ********** top page ********** //
@@ -85,10 +92,10 @@
     max-width: 750px;
     margin: 50px auto 0;
     @include mediaQuerySp($spMaxWidth) {
-        max-width: 500px;
+        max-width: 400px;
     }
     @include mediaQuerySpXs($sp-xs-MaxWidth) {
-        max-width: 300px;
+        max-width: 280px;
     }
     .slide-img {
         border: 2px solid $main-color;
@@ -103,14 +110,24 @@
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
+        @include mediaQuerySp($spMaxWidth) {
+            width: 30px;
+            height: 30px;
+        }
     }
     .slick-prev {
         left: -50px;
         background: url('assets/img/prev-arrow.svg') no-repeat center;
+        @include mediaQuerySp($spMaxWidth) {
+            left: -32px;
+        }
     }
     .slick-next {
         right: -50px;
         background: url('assets/img/next-arrow.svg') no-repeat center;
+        @include mediaQuerySp($spMaxWidth) {
+            right: -32px;
+        }
     }
     .slick-prev:before {
         content: "";
@@ -187,6 +204,9 @@
         padding: 100px 0;
         background: url('assets/img/news-bg.png') no-repeat center;
         background-size: 100% 100%;
+        @include mediaQuerySp($spMaxWidth) {
+            background-size: cover;
+        }
         &::after {
             content: '';
             position: absolute;
@@ -197,6 +217,10 @@
             height: 90%;
             background: url(assets/img/news-girl.png) no-repeat center;
             z-index: 0;
+            background-size: contain;
+            @include mediaQuerySp($spMaxWidth) {
+                max-width: 150px;
+            }
         }
     }
     .happy-title {
@@ -210,6 +234,7 @@
 
 .news-box {
     position: relative;
+    width: 95%;
     max-width: 1000px;
     margin: 0 auto;
     &:before {
@@ -229,6 +254,13 @@
         z-index: 9;
         right: 75px;
         bottom: 5px;
+        @include mediaQuerySp($spMaxWidth) {
+            width: 30px;
+            height: 30px;
+            z-index: 9;
+            right: 9px;
+            bottom: 7px;
+        }
     }
 }
 
@@ -243,6 +275,9 @@
     clip-path: polygon(0 0, 100% 7%, 100% 85%, 3% 100%);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    @include mediaQuerySp($spMaxWidth) {
+        padding: 30px 20px 30px 40px;
+    }
     &--box {
         height: 86px;
         overflow-y: auto;
@@ -277,6 +312,10 @@
                 margin-right: 10px;
             }
         }
+        @include mediaQuerySp($spMaxWidth) {
+            margin-bottom: 5px;
+            font-size: 10px;
+        }
     }
     &:after {
         position: absolute;
@@ -310,6 +349,12 @@
             top: -10px;
             left: 27%;
             z-index: 9;
+            @include mediaQuerySp($spMaxWidth) {
+                max-width: 30px;
+            }
+        }
+        @include mediaQuerySp($spMaxWidth) {
+            width: 100%;
         }
     }
 }
@@ -322,6 +367,9 @@
         background: url('assets/img/cast-bg.png') no-repeat center;
         background-size: 100% 100%;
         z-index: 9;
+        @include mediaQuerySp($spMaxWidth) {
+            background-size: cover;
+        }
         .cast-ttl {
             position: relative;
             top: -20px;
@@ -332,6 +380,12 @@
                 left: 33%;
                 top: -30px;
                 z-index: -1;
+                @include mediaQuerySp($spMaxWidth) {
+                    left: 0;
+                    right: 0;
+                    top: -45px;
+                    margin: 0 auto;
+                }
             }
         }
         .cast-ico {
@@ -339,6 +393,9 @@
             max-width: 500px;
             right: -30px;
             top: -45px;
+            @include mediaQuerySp($spMaxWidth) {
+                max-width: 100px;
+            }
         }
     }
     .person-list {
@@ -350,11 +407,31 @@
             span {
                 display: block;
                 text-align: center;
+                @include mediaQuerySp($spMaxWidth) {
+                    font-size: 12px;
+                }
             }
+            @include mediaQuerySp($spMaxWidth) {
+                width: 32%;
+                &:nth-child(2) {
+                    width: 28%;
+                }
+            }
+        }
+        @include mediaQuerySp($spMaxWidth) {
+            margin-top: 50px;
+            padding: 0 20px;
+            align-items: flex-start;
         }
     }
     .cast-btn {
         bottom: 0;
+        @include mediaQuerySp($spMaxWidth) {
+            bottom: 10px;
+        }
+    }
+    @include mediaQuerySp($spMaxWidth) {
+        margin-top: 100px;
     }
 }
 
@@ -364,8 +441,12 @@
         padding: 100px 0;
         background: url('assets/img/media-bg.png') no-repeat center;
         background-size: 100% 100%;
+        @include mediaQuerySp($spMaxWidth) {
+            padding: 50px 0;
+            background-size: cover;
+        }
         .media-list {
-            width: 100%;
+            width: 90%;
             max-width: 800px;
             margin: 0 auto;
             justify-content: space-between;
@@ -380,6 +461,10 @@
             max-width: 300px;
             right: 0;
             bottom: 45px;
+            @include mediaQuerySp($spMaxWidth) {
+                max-width: 90px;
+                bottom: 26px;
+            }
         }
         .star-ico {
             position: absolute;
@@ -387,6 +472,11 @@
             top: -22px;
             right: -65px;
             width: 17%;
+            @include mediaQuerySp($spMaxWidth) {
+                top: -38px;
+                right: -27px;
+                width: 30%;
+            }
         }
         .title01 {
             position: absolute;
