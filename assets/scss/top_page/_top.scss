@@ -495,6 +495,7 @@
     margin: 100px 0 50px;
     .support-in {
         position: relative;
+        width: 90%;
         max-width: 1050px;
         padding: 80px;
         background-color: #99c9c4;
@@ -506,6 +507,9 @@
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
         box-sizing: border-box;
+        @include mediaQuerySp($spMaxWidth) {
+            padding: 50px 20px 20px 20px;
+        }
         .sup-ttl {
             position: absolute;
             top: -40px;
@@ -521,6 +525,10 @@
             align-items: center;
             .support-logo {
                 width: 22%;
+                @include mediaQuerySp($spMaxWidth) {
+                    width: 48%;
+                    margin-bottom: 20px;
+                }
             }
         }
         .girl-ico {
@@ -530,7 +538,7 @@
             left: 12%;
             @include mediaQuerySp($spMaxWidth) {
                 width: 70px;
-                top: -53%;
+                top: -43%;
             }
         }
         .icon01 {
@@ -538,6 +546,11 @@
             width: 13%;
             top: -32%;
             left: -6%;
+            @include mediaQuerySp($spMaxWidth) {
+                width: 20%;
+                top: -18%;
+                left: -10%;
+            }
         }
     }
 }
@@ -546,6 +559,7 @@
     margin: 0 0 150px;
     .partner-in {
         position: relative;
+        width: 90%;
         max-width: 1050px;
         padding: 80px;
         background-color: #59a7a4;
@@ -557,18 +571,28 @@
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
         box-sizing: border-box;
+        @include mediaQuerySp($spMaxWidth) {
+            padding: 50px 20px 20px 20px;
+        }
         .sup-ttl {
             position: absolute;
             top: -40px;
             left: 0;
             right: 0;
             margin: 0 auto;
+            @include mediaQuerySp($spMaxWidth) {
+                top: -26px;
+            }
         }
         .partner-list {
             justify-content: space-between;
             align-items: center;
             .partner-logo {
                 width: 22%;
+                @include mediaQuerySp($spMaxWidth) {
+                    width: 48%;
+                    margin-bottom: 20px;
+                }
             }
         }
         .pat-ico01 {
@@ -576,16 +600,30 @@
             width: 20%;
             top: -115px;
             left: -100px;
+            @include mediaQuerySp($spMaxWidth) {
+                width: 30%;
+                top: -40%;
+                left: -11%;
+            }
         }
         .pat-ico02 {
             position: absolute;
             width: 13%;
             bottom: -60px;
             right: -65px;
+            @include mediaQuerySp($spMaxWidth) {
+                width: 22%;
+                bottom: -48px;
+                right: -27px;
+            }
         }
         .contact-btn {
             width: 320px;
             bottom: -80px;
+            @include mediaQuerySp($spMaxWidth) {
+                width: 260px;
+                font-size: 14px;
+            }
         }
     }
 }
@@ -599,8 +637,10 @@
         background: url('assets/img/twtt-bg.png') no-repeat center;
         background-size: 100% 100%;
         @include mediaQuerySp($spMaxWidth) {
-            background: #59a7a4;
-            border: 3px solid $main-color
+            background: unset;
+            padding: 0;
+            // background: #59a7a4;
+            // border: 3px solid $main-color
         }
         &:after {
             position: absolute;
@@ -613,6 +653,9 @@
             background: url('assets/img/twt-girl.png') no-repeat center;
             background-size: contain;
             z-index: 0;
+            @include mediaQuerySp($spMaxWidth) {
+                display: none;
+            }
         }
         .twt-ttl {
             text-align: left;
@@ -620,17 +663,40 @@
             top: 28%;
             left: 14%;
             z-index: 9;
+            @include mediaQuerySp($spMaxWidth) {
+                text-align: center;
+                top: 13%;
+                left: -20px;
+                right: 0;
+                margin: 0 auto;
+            }
         }
         .ang-img {
             position: absolute;
             width: 57%;
             top: 0;
+            @include mediaQuerySp($spMaxWidth) {
+                position: unset;
+                width: 100%;
+                max-width: 900px;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: 50px auto 0;
+            }
         }
         .twt-btn {
             top: 45%;
             right: unset;
             bottom: unset;
             left: 16%;
+            @include mediaQuerySp($spMaxWidth) {
+                top: 19%;
+                right: 0;
+                bottom: unset;
+                left: -30px;
+                margin: 0 auto;
+            }
         }
         .twt-frame {
             position: absolute;
@@ -638,6 +704,14 @@
             right: 13.2%;
             top: -5%;
             z-index: 1;
+            @include mediaQuerySp($spMaxWidth) {
+                position: unset;
+                width: 80%;
+                right: 0;
+                top: 0;
+                z-index: 1;
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -651,6 +725,9 @@
             z-index: 9;
             li {
                 width: 25%;
+                @include mediaQuerySp($spMaxWidth) {
+                    width: 50%;
+                }
                 a {
                     position: relative;
                     display: block;
@@ -671,13 +748,10 @@
         }
         .insta-ttl {
             position: absolute;
-            top: 48%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
+            top: 43%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
             z-index: 9;
         }
         .insta-btn {
