@@ -1,0 +1,110 @@
+    @include mediaQuerySp($spMaxWidth) {
+        .menu-trigger {
+            display: inline-block;
+            position: relative;
+            top: 0;
+            right: 10px;
+            width: 45px;
+            height: 45px;
+            background-color: $main-color;
+            border-radius: 50%;
+            cursor: pointer;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            z-index: 99;
+            transition: all .4s;
+            -webkit-transition: all .4s;
+            -moz-transition: all .4s;
+            -ms-transition: all .4s;
+            -o-transition: all .4s;
+            &.active {
+                top: -80px;
+                span {
+                    &:nth-of-type(1) {
+                        top: 2px;
+                        -webkit-transform: translateY(20px) rotate(-45deg);
+                        transform: translateY(20px) rotate(-45deg);
+                        -moz-transform: translateY(20px) rotate(-45deg);
+                        -ms-transform: translateY(20px) rotate(-45deg);
+                        -o-transform: translateY(20px) rotate(-45deg);
+                    }
+                    &:nth-of-type(2) {
+                        opacity: 0;
+                    }
+                    &:nth-of-type(3) {
+                        bottom: 2px;
+                        -webkit-transform: translateY(-20px) rotate(45deg);
+                        transform: translateY(-20px) rotate(45deg);
+                        -moz-transform: translateY(-20px) rotate(45deg);
+                        -ms-transform: translateY(-20px) rotate(45deg);
+                        -o-transform: translateY(-20px) rotate(45deg);
+                    }
+                }
+            }
+            span {
+                display: block;
+                transition: all .4s;
+                -webkit-transition: all .4s;
+                -moz-transition: all .4s;
+                -ms-transition: all .4s;
+                -o-transition: all .4s;
+                box-sizing: border-box;
+                z-index: 99;
+                position: absolute;
+                left: 0;
+                right: 0;
+                width: 50%;
+                margin: 0 auto;
+                height: 2px;
+                background-color: #fff;
+                border-radius: 50px;
+                &:nth-of-type(1) {
+                    top: 14px;
+                }
+                &:nth-of-type(2) {
+                    top: 21px;
+                }
+                &:nth-of-type(3) {
+                    bottom: 15px;
+                }
+            }
+        }
+        .nav-list {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(249, 249, 249, 1);
+            overflow: auto;
+            -webkit-transition: background-color 0.5s ease-in-out;
+            -moz-transition: background-color 0.5s ease-in-out;
+            transition: background-color 0.5s ease-in-out;
+            z-index: 2;
+        }
+        .nav-list.toggle {
+            display: block;
+        }
+        .nav-list ul {
+            width: 55%;
+            margin: 0 auto;
+        }
+        .nav-list.toggle ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .nav-list li {
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        .nav-list li:last-child {
+            border-bottom: 0px;
+        }
+        .nav-list li a {
+            display: block;
+            text-align: center;
+        }
+    }

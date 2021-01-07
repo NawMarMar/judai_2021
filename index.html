@@ -46,8 +46,12 @@
     <div class="main-visual">
         <header>
             <div class="hd-inner d-fl">
-                <h1 class="hd-logo"><img src="assets/img/hd-logo.svg" alt="十代のための体験型フェス"></h1>
-                <nav class="pc-only">
+                <h1 class="hd-logo">
+                    <span class="hd-txt01">十代のための体験型フェス</span>
+                    <img src="assets/img/logo.svg" alt="十代のための体験型フェス">
+                    <p class="hd-txt02"><span>3.30</span>(tue)＠豊洲ピット</p>
+                </h1>
+                <div class="pc-only">
                     <ul class="nav-list d-fl">
                         <li>
                             <a href="#">超十代って？</a>
@@ -74,23 +78,51 @@
                             <a href="#">レポート</a>
                         </li>
                     </ul>
-                </nav>
+                </div>
+                <div class="sp-only">
+                    <div class="menu-trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="nav-list">
+                        <ul>
+                            <li>
+                                <a href="#">超十代って？</a>
+                            </li>
+                            <li>
+                                <a href="#">タイムテーブル</a>
+                            </li>
+                            <li>
+                                <a href="#">キャスト</a>
+                            </li>
+                            <li>
+                                <a href="#">ブランド</a>
+                            </li>
+                            <li>
+                                <a href="#">ニュース</a>
+                            </li>
+                            <li>
+                                <a href="#">アクセス</a>
+                            </li>
+                            <li>
+                                <a href="#">Q＆A</a>
+                            </li>
+                            <li>
+                                <a href="#">レポート</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
         </header>
         <a href="#" class="info-covid">新型コロナウイルス感染予防対策について</a>
         <div class="slider">
-            <div class="slide-img">
-                <img src="assets/img/mv-img.png" alt="image">
-            </div>
-            <div class="slide-img">
-                <img src="assets/img/mv-img.png" alt="image">
-            </div>
-            <div class="slide-img">
-                <img src="assets/img/mv-img.png" alt="image">
-            </div>
-            <div class="slide-img">
-                <img src="assets/img/mv-img.png" alt="image">
-            </div>
+            <img src="assets/img/mv-img.png" alt="image" class="slide-img">
+            <img src="assets/img/mv-img.png" alt="image" class="slide-img">
+            <img src="assets/img/mv-img.png" alt="image" class="slide-img">
+            <img src="assets/img/mv-img.png" alt="image" class="slide-img">
         </div>
     </div>
     <main>
@@ -140,7 +172,7 @@
                 <figure>
                     <img src="assets/img/covid-info-img.png" alt="コロナウイルス">
                 </figure>
-                <p class="info-txt01"><img src="assets/img/info-txt01.svg" alt="読んでね"></p>
+                <p class="info-txt01"><img src="assets/img/info-txt01.png" alt="読んでね"></p>
                 <p class="star01"><img src="assets/img/star-01.png" alt="star-01"></p>
                 <a href="#" class="more-btn">もっとみる</a>
             </div>
@@ -251,8 +283,14 @@
         </div>
         <div class="twiter-wrap">
             <div class="twt-in inner">
-                <h2 class="cmn-ttl twt-ttl">ツイッター</h2>
-                <a href="#" class="more-btn twt-btn">もっとみる</a>
+                <div class="twt-title">
+                    <h2 class="cmn-ttl twt-ttl">ツイッター</h2>
+                    <p class="ang-img">
+                        <img src="assets/img/angry-img.png" alt="angry">
+                    </p>
+                    <a href="#" class="more-btn twt-btn">もっとみる</a>
+                </div>
+
                 <div class="twt-frame">
                     <img src="assets/img/twt-img.png" alt="twiter">
                 </div>
@@ -378,33 +416,19 @@
         </div>
         <p class="copyright">Created by Joint Media Inc.</p>
         <div class="ft-top">
-            <ul>
-                <li>
-                    <a href="#top" class="top-btn"><img src="assets/img/top-btn.svg" alt="top"></a>
-                </li>
-                <li>
-                    <a href="#top"><img src="assets/img/twt-ico01.svg" alt="twiter"></a>
-                </li>
-                <li>
-                    <a href="#top"><img src="assets/img/fb-ico01.svg" alt="facebook"></a>
-                </li>
-                <li>
-                    <a href="#top"><img src="assets/img/insta-ico01.svg" alt="instagram"></a>
-                </li>
-                <li>
-                    <a href="#top"><img src="assets/img/ytb-ico01.svg" alt="youtube"></a>
-                </li>
-                <li>
-                    <a href="#top"><img src="assets/img/btm-txt01.svg" alt="チケット購入はこちら"></a>
-                </li>
-            </ul>
+            <a href="#top" class="top-btn"><img src="assets/img/top-btn.svg" alt="top"></a>
+            <a href="#top"><img src="assets/img/twt-ico01.svg" alt="twiter"></a>
+            <a href="#top"><img src="assets/img/fb-ico01.svg" alt="facebook"></a>
+            <a href="#top"><img src="assets/img/insta-ico01.svg" alt="instagram"></a>
+            <a href="#top"><img src="assets/img/ytb-ico01.svg" alt="youtube"></a>
+            <a href="#top"><img src="assets/img/btm-txt01.svg" alt="チケット購入はこちら"></a>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/slick/slick.js"></script>
     <script src="assets/js/common.js"></script>
-    <!-- <script src="assets/js/lazy-loading.js"></script> -->
+    <script src="assets/js/lazy-loading.js"></script>
 
 </body>
 

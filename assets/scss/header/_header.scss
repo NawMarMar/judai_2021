@@ -8,11 +8,41 @@ header {
     width: 95%;
     margin: 0 auto;
     justify-content: space-between;
+    @include mediaQuerySp($spMaxWidth) {
+        width: 90%;
+        align-items: center;
+    }
 }
 
 .hd-logo {
-    max-width: 220px;
+    max-width: 200px;
     width: 30%;
+    .hd-txt01 {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 11px;
+        text-align: center;
+        font-weight: 900;
+        @include mediaQuerySp($spMaxWidth) {
+            font-size: 8px;
+        }
+    }
+    .hd-txt02 {
+        display: block;
+        font-size: 12px;
+        text-align: center;
+        font-weight: 900;
+        @include mediaQuerySp($spMaxWidth) {
+            font-size: 8px;
+        }
+        span {
+            display: inline-block;
+            font-size: 22px;
+            @include mediaQuerySp($spMaxWidth) {
+                font-size: 18px;
+            }
+        }
+    }
 }
 
 .nav-list {
@@ -20,6 +50,7 @@ header {
     li {
         margin: 0 5px;
         a {
+            display: block;
             padding: 8px 10px;
             background-color: #e5c54f;
             border-radius: 5px;
@@ -35,5 +66,8 @@ header {
         &:last-child {
             margin-right: 0;
         }
+    }
+    @include mediaQuerySp($spMaxWidth) {
+        margin-top: 0;
     }
 }
