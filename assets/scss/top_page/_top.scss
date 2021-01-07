@@ -95,7 +95,7 @@
         max-width: 400px;
     }
     @include mediaQuerySpXs($sp-xs-MaxWidth) {
-        max-width: 280px;
+        max-width: 230px;
     }
     .slide-img {
         border: 2px solid $main-color;
@@ -395,6 +395,7 @@
             top: -45px;
             @include mediaQuerySp($spMaxWidth) {
                 max-width: 100px;
+                right: 0;
             }
         }
     }
@@ -474,7 +475,7 @@
             width: 17%;
             @include mediaQuerySp($spMaxWidth) {
                 top: -38px;
-                right: -27px;
+                right: 0;
                 width: 30%;
             }
         }
@@ -614,7 +615,7 @@
             @include mediaQuerySp($spMaxWidth) {
                 width: 22%;
                 bottom: -48px;
-                right: -27px;
+                right: 0;
             }
         }
         .contact-btn {
