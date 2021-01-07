@@ -483,6 +483,10 @@
             width: 36%;
             bottom: -25%;
             right: 0;
+            @include mediaQuerySp($spMaxWidth) {
+                width: 50%;
+                bottom: -40%;
+            }
         }
     }
 }
@@ -508,6 +512,9 @@
             left: 0;
             right: 0;
             margin: 0 auto;
+            @include mediaQuerySp($spMaxWidth) {
+                top: -26px;
+            }
         }
         .support-list {
             justify-content: space-between;
@@ -521,6 +528,10 @@
             width: 10%;
             top: -64%;
             left: 12%;
+            @include mediaQuerySp($spMaxWidth) {
+                width: 70px;
+                top: -53%;
+            }
         }
         .icon01 {
             position: absolute;
@@ -532,7 +543,7 @@
 }
 
 .partner-wrap {
-    margin: 0 0 100px;
+    margin: 0 0 150px;
     .partner-in {
         position: relative;
         max-width: 1050px;
@@ -584,14 +595,30 @@
     .twt-in {
         position: relative;
         max-width: 1000px;
-        padding: 300px 0;
-        background: url('assets/img/twt-bg.png') no-repeat center;
+        padding: 250px 0;
+        background: url('assets/img/twtt-bg.png') no-repeat center;
         background-size: 100% 100%;
+        @include mediaQuerySp($spMaxWidth) {
+            background: #59a7a4;
+            border: 3px solid $main-color
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            top: -32%;
+            right: -5%;
+            width: 100%;
+            height: 100%;
+            max-width: 230px;
+            background: url('assets/img/twt-girl.png') no-repeat center;
+            background-size: contain;
+            z-index: 0;
+        }
         .twt-ttl {
             text-align: left;
             position: absolute;
-            top: 25%;
-            left: 16%;
+            top: 28%;
+            left: 14%;
             z-index: 9;
         }
         .ang-img {
@@ -600,16 +627,17 @@
             top: 0;
         }
         .twt-btn {
-            top: 40%;
+            top: 45%;
             right: unset;
             bottom: unset;
             left: 16%;
         }
         .twt-frame {
             position: absolute;
-            width: 37%;
-            right: 15.2%;
-            top: 2%;
+            width: 34%;
+            right: 13.2%;
+            top: -5%;
+            z-index: 1;
         }
     }
 }
