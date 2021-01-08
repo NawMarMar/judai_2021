@@ -1,9 +1,4 @@
 // ********** header ********** //
-header {
-    position: relative;
-    z-index: 99;
-}
-
 .hd-inner {
     width: 95%;
     margin: 0 auto;
@@ -15,7 +10,7 @@ header {
 }
 
 .hd-logo {
-    max-width: 200px;
+    max-width: 175px;
     width: 30%;
     .hd-txt01 {
         display: block;

@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>十代のための体験型フェス</title>
 </head>
 <script>
@@ -48,7 +48,7 @@
             <div class="hd-inner d-fl">
                 <h1 class="hd-logo">
                     <span class="hd-txt01">十代のための体験型フェス</span>
-                    <img src="assets/img/logo.svg" alt="十代のための体験型フェス">
+                    <img src="assets/img/hd-logo.png" alt="十代のための体験型フェス">
                     <p class="hd-txt02"><span>3.30</span>(tue)＠豊洲ピット</p>
                 </h1>
                 <div class="pc-only">
@@ -60,16 +60,16 @@
                             <a href="#">タイムテーブル</a>
                         </li>
                         <li>
-                            <a href="#">キャスト</a>
+                            <a href="#cast">キャスト</a>
                         </li>
                         <li>
                             <a href="#">ブランド</a>
                         </li>
                         <li>
-                            <a href="#">ニュース</a>
+                            <a href="#news">ニュース</a>
                         </li>
                         <li>
-                            <a href="#">アクセス</a>
+                            <a href="#access">アクセス</a>
                         </li>
                         <li>
                             <a href="#">Q＆A</a>
@@ -113,11 +113,12 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </header>
-        <a href="#" class="info-covid">新型コロナウイルス感染予防対策について</a>
+        <div class="top-covid">
+            <a href="#" class="info-covid">新型コロナウイルス感染予防対策について</a>
+        </div>
         <div class="slider">
             <img src="assets/img/mv-img.png" alt="image" class="slide-img">
             <img src="assets/img/mv-img.png" alt="image" class="slide-img">
@@ -128,9 +129,6 @@
     <main>
         <div class="news-wrap" id="news">
             <div class="news-in inner">
-                <h2 class="happy-title">
-                    <img src="assets/img/happy-ttl.svg" alt="楽しみ">
-                </h2>
                 <div class="news-box">
                     <h2 class="cmn-ttl news-ttl">ニュース</h2>
                     <div class="news-detail">
@@ -172,14 +170,14 @@
                 <figure>
                     <img src="assets/img/covid-info-img.png" alt="コロナウイルス">
                 </figure>
-                <p class="info-txt01"><img src="assets/img/info-txt01.png" alt="読んでね"></p>
-                <p class="star01"><img src="assets/img/star-01.png" alt="star-01"></p>
+                <p class="info-txt01"><img src="assets/img/info-txt01.svg" alt="読んでね"></p>
+                <p class="star01"><img src="assets/img/star-01.svg" alt="star-01"></p>
                 <a href="#" class="more-btn">もっとみる</a>
             </div>
         </div>
-        <div class="cast-wrap">
+        <div class="cast-wrap" id="cast">
             <div class="cast-in inner">
-                <h2 class="cmn-ttl cast-ttl"><span><img src="assets/img/ico-02.png" alt="キャスト"></span>キャスト</h2>
+                <h2 class="cmn-ttl cast-ttl"><span><img src="assets/img/ico-02.svg" alt="キャスト"></span>キャスト</h2>
                 <ul class="person-list d-fl">
                     <li>
                         <figure><img src="assets/img/person01.png" alt="石川翔鈴"></figure>
@@ -206,11 +204,11 @@
                         <span>アンジェリ</span>
                     </li>
                 </ul>
-                <p class="cast-ico"><img src="assets/img/ico-01.png" alt="!!"></p>
+                <p class="cast-ico"><img src="assets/img/ico-01.svg" alt="!!"></p>
                 <a href="#" class="more-btn cast-btn">もっとみる</a>
             </div>
         </div>
-        <div class="media-wrap">
+        <div class="media-wrap" id="media">
             <div class="media-in inner">
                 <div class="media-list d-fl">
                     <div>
@@ -237,7 +235,7 @@
                 <p class="title01"><img src="assets/img/support-ttl.svg" alt="title"></p>
             </div>
         </div>
-        <div class="support-wrap">
+        <div class="support-wrap" id="support">
             <div class="support-in inner">
                 <h2 class="cmn-ttl sup-ttl">サポート</h2>
                 <div class="support-list d-fl">
@@ -254,12 +252,14 @@
                         <img src="assets/img/logo-ico.png" alt="logo">
                     </div>
                 </div>
+                <div class="icon">
+                    <span class="girl-ico"><img src="assets/img/girl-02.png" alt="title"></span>
+                    <span class="icon01"><img src="assets/img/ico-03.svg" alt="icon"></span>
+                </div>
 
-                <p class="girl-ico"><img src="assets/img/girl-02.png" alt="title"></p>
-                <p class="icon01"><img src="assets/img/ico-03.svg" alt="icon"></p>
             </div>
         </div>
-        <div class="partner-wrap">
+        <div class="partner-wrap" id="product">
             <div class="partner-in inner">
                 <h2 class="cmn-ttl sup-ttl">パートナー</h2>
                 <div class="partner-list d-fl">
@@ -281,7 +281,7 @@
                 <a href="#" class="more-btn contact-btn">ご協賛に関するお問い合わせ</a>
             </div>
         </div>
-        <div class="twiter-wrap">
+        <div class="twiter-wrap" id="twitter">
             <div class="twt-in inner">
                 <div class="twt-title">
                     <h2 class="cmn-ttl twt-ttl">ツイッター</h2>
@@ -299,33 +299,33 @@
                 </div>
             </div>
         </div>
-        <div class="insta-wrap">
+        <div class="insta-wrap" id="instagram">
             <div class="insta-in">
                 <h2 class="cmn-ttl insta-ttl">インスタグラム</h2>
                 <ul class="d-fl">
                     <li>
-                        <a href="#"><img src="assets/img/insta-img01.png" alt="instagram"></a>
+                        <a href="#"><img src="assets/img/insta-01.jpg" alt="instagram"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/img/insta-img02.png" alt="instagram"></a>
+                        <a href="#"><img src="assets/img/insta-02.jpg" alt="instagram"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/img/insta-img03.png" alt="instagram"></a>
+                        <a href="#"><img src="assets/img/insta-03.jpg" alt="instagram"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/img/insta-img04.png" alt="instagram"></a>
+                        <a href="#"><img src="assets/img/insta-04.jpg" alt="instagram"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/img/insta-img05.png" alt="instagram"></a>
+                        <a href="#"><img src="assets/img/insta-05.jpg" alt="instagram"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/img/insta-img06.png" alt="instagram"></a>
+                        <a href="#"><img src="assets/img/insta-06.jpg" alt="instagram"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/img/insta-img07.png" alt="instagram"></a>
+                        <a href="#"><img src="assets/img/insta-07.jpg" alt="instagram"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/img/insta-img08.png" alt="instagram"></a>
+                        <a href="#"><img src="assets/img/insta-08.jpg" alt="instagram"></a>
                     </li>
                 </ul>
                 <a href="#" class="more-btn insta-btn">もっとみる</a>
@@ -335,9 +335,9 @@
 
     <footer>
         <div class="footer">
-            <div class="ft-in inner">
+            <div class="inner">
                 <div class="ft-logo d-fl">
-                    <h1 class="ft-logo--logo1"><img src="assets/img/ft-L-logo.svg" alt="logo"></h1>
+                    <h1 class="ft-logo--logo1"><img src="assets/img/ft-logo.png" alt="logo"></h1>
                     <h1 class="ft-logo--logo2"><img src="assets/img/ft-R-logo.png" alt="logo"></h1>
                 </div>
                 <ul class="ft-list d-fl">
@@ -429,9 +429,9 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/slick/slick.js"></script>
+    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
     <script src="assets/js/common.js"></script>
-    <script src="assets/js/lazy-loading.js"></script>
+    <!-- <script src="assets/js/lazy-loading.js"></script> -->
 
 </body>
 
