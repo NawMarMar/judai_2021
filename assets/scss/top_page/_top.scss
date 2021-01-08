@@ -631,6 +631,11 @@
 
 .twiter-wrap {
     margin-bottom: 80px;
+    @include mediaQuerySp($spMaxWidth) {
+        padding: 20px 0 50px;
+        margin-bottom: 0;
+        background-color: #4ecff2;
+    }
     .twt-in {
         position: relative;
         max-width: 1000px;
@@ -640,8 +645,6 @@
         @include mediaQuerySp($spMaxWidth) {
             background: unset;
             padding: 0;
-            // background: #59a7a4;
-            // border: 3px solid $main-color
         }
         &:after {
             position: absolute;
@@ -703,15 +706,45 @@
             position: absolute;
             width: 34%;
             right: 13.2%;
-            top: -5%;
+            top: -9%;
+            padding: 10px;
+            background-color: #2dbaec;
             z-index: 1;
+            box-sizing: border-box;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
             @include mediaQuerySp($spMaxWidth) {
                 position: unset;
-                width: 80%;
+                width: 90%;
                 right: 0;
                 top: 0;
                 z-index: 1;
-                margin: 0 auto;
+                margin: 30px auto 0;
+            }
+        }
+        .twt-feed {
+            height: 550px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+                border-radius: 10px;
+                background-color: #F5F5F5;
+            }
+            &::-webkit-scrollbar {
+                width: 8px;
+                background-color: #F5F5F5;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+                background-color: #b5b5b5;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
             }
         }
     }

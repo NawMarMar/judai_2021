@@ -68,6 +68,8 @@ footer {
         }
         @include mediaQuerySp($spMaxWidth) {
             margin: 30px auto 0;
+            position: relative;
+            z-index: 9;
         }
     }
     .ft-covid {
@@ -148,6 +150,6 @@ footer {
     }
     @include mediaQuerySp($spMaxWidth) {
         width: 9%;
-        right: 5px;
+        right: 15px;
     }
 }
