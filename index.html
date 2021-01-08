@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>十代のための体験型フェス</title>
 </head>
 <script>
@@ -43,6 +44,10 @@
 </script>
 
 <body>
+    <div class="loading">
+        <div class="num">000</div>
+        <div class="loading-img"></div>
+    </div>
     <div class="main-visual">
         <header>
             <div class="hd-inner d-fl">
@@ -136,7 +141,7 @@
         <div class="news-wrap" id="news">
 
             <div class="news-in inner">
-                <h2 class="happy-ttl"><img src="assets/img/happy-ttl.svg" alt="楽しみ"></h2>
+                <h2 class="happy-ttl animate__animated animate__infinite animate__flash"><img src="assets/img/happy-ttl.svg" alt="楽しみ"></h2>
                 <div class="news-box">
                     <h2 class="cmn-ttl news-ttl">ニュース</h2>
                     <div class="news-detail">
@@ -179,13 +184,13 @@
                     <img src="assets/img/covid-info-img.png" alt="コロナウイルス">
                 </figure>
                 <p class="info-txt01"><img src="assets/img/info-txt01.svg" alt="読んでね"></p>
-                <p class="star01"><img src="assets/img/star-01.svg" alt="star-01"></p>
+                <p class="star01 animate__animated animate__infinite animate__heartBeat animate__delay-2s"><img src="assets/img/star-01.svg" alt="star-01"></p>
                 <a href="#" class="more-btn">もっとみる</a>
             </div>
         </div>
         <div class="cast-wrap" id="cast">
             <div class="cast-in inner">
-                <h2 class="cmn-ttl cast-ttl"><span><img src="assets/img/ico-02.svg" alt="キャスト"></span>キャスト</h2>
+                <h2 class="cmn-ttl cast-ttl"><span class="animate__animated animate__infinite animate__bounceIn animate__delay-2s"><img src="assets/img/ico-02.svg" alt="キャスト"></span>キャスト</h2>
                 <ul class="person-list d-fl">
                     <li>
                         <figure><img src="assets/img/person01.png" alt="石川翔鈴"></figure>
@@ -212,7 +217,7 @@
                         <span>アンジェリ</span>
                     </li>
                 </ul>
-                <p class="cast-ico"><img src="assets/img/ico-01.svg" alt="!!"></p>
+                <p class="cast-ico animate__animated animate__infinite animate__bounceIn"><img src="assets/img/ico-01.svg" alt="!!"></p>
                 <a href="#" class="more-btn cast-btn">もっとみる</a>
             </div>
         </div>
@@ -239,8 +244,8 @@
                     </div>
                 </div>
                 <p class="girl-ico"><img src="assets/img/girl-01.png" alt="girl"></p>
-                <p class="star-ico"><img src="assets/img/star-02.svg" alt="star"></p>
-                <p class="title01"><img src="assets/img/support-ttl.svg" alt="title"></p>
+                <p class="star-ico animate__animated animate__infinite animate__heartBeat"><img src="assets/img/star-02.svg" alt="star"></p>
+                <p class="title01 animate__animated animate__infinite animate__tada"><img src="assets/img/support-ttl.svg" alt="title"></p>
             </div>
         </div>
         <div class="support-wrap" id="support">
@@ -262,7 +267,7 @@
                 </div>
                 <div class="icon">
                     <span class="girl-ico"><img src="assets/img/girl-02.png" alt="title"></span>
-                    <span class="icon01"><img src="assets/img/ico-03.svg" alt="icon"></span>
+                    <span class="icon01"><img src="assets/img/ico-03.gif" alt="icon"></span>
                 </div>
 
             </div>
@@ -284,8 +289,8 @@
                         <img src="assets/img/logo-ico.png" alt="logo">
                     </div>
                 </div>
-                <p class="pat-ico01"><img src="assets/img/ico-04.svg" alt="icon"></p>
-                <p class="pat-ico02"><img src="assets/img/ico-05.svg" alt="icon"></p>
+                <p class="pat-ico01 pat-ico01 animate__animated animate__infinite animate__heartBeat"><img src="assets/img/ico-04.svg" alt="icon"></p>
+                <p class="pat-ico02"><img src="assets/img/ico-03.gif" alt="icon"></p>
                 <a href="#" class="more-btn contact-btn">ご協賛に関するお問い合わせ</a>
             </div>
         </div>
@@ -294,8 +299,14 @@
                 <div class="twt-title">
                     <h2 class="cmn-ttl twt-ttl">ツイッター</h2>
                     <p class="ang-img">
-                        <img src="assets/img/angry-img.png" alt="angry">
+                        <img src="assets/img/cloud.svg" alt="angry">
                     </p>
+                    <img class="ang-sm-img-t" src="assets/img/cloud-sm.svg" alt="">
+                    <img class="ang-sm-img-tc" src="assets/img/cloud-sm.svg" alt="">
+                    <img class="ang-sm-img-r" src="assets/img/cloud-sm.svg" alt="">
+                    <img class="ang-sm-img-rc" src="assets/img/cloud-sm.svg" alt="">
+                    <img class="ang-sm-img-bc" src="assets/img/cloud-sm.svg" alt="">
+                    <img class="ang-sm-img-lb" src="assets/img/cloud-sm.svg" alt="">
                     <a href="#" class="more-btn twt-btn">もっとみる</a>
                 </div>
 
@@ -422,7 +433,7 @@
                 </ul>
                 <p class="ft-text">© 超十代製作委員会</p>
             </div>
-            <p class="ft-ico01"><img src="assets/img/ft-ico01.svg" alt="icon"></p>
+            <p class="ft-ico01 animate__animated animate__infinite animate__tada"><img src="assets/img/ft-ico01.svg" alt="icon"></p>
             <p class="ft-ico02"><img src="assets/img/girl-03.png" alt="icon"></p>
         </div>
         <p class="copyright">Created by Joint Media Inc.</p>
