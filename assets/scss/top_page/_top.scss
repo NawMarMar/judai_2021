@@ -53,7 +53,7 @@
     .main-visual {
         position: relative;
         max-width: 1280px;
-        width: 90%;
+        width: 100%;
         margin: 50px auto;
         padding: 50px 0 100px;
         background-color: $main-color;
@@ -62,8 +62,9 @@
         // background-size: 100% 100%;
         z-index: 99;
         @include mediaQuerySp($spMaxWidth) {
-            margin: 20px auto;
+            margin: 0 auto;
             background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }
         &:before {
             content: '';
@@ -77,6 +78,12 @@
             background-position: center;
             background-size: 100% 100%;
             clip-path: polygon(0 0, 100% 4%, 100% 97%, 0% 100%);
+            @include mediaQuerySp($spMaxWidth) {
+                width: 98.9%;
+                height: 98.9%;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                background-image: url('assets/img/mv-line-sp.png');
+            }
         }
         &:after {
             content: '';
@@ -88,6 +95,11 @@
             clip-path: polygon(0 0, 100% 4%, 100% 97%, 0% 100%);
             background-color: $secondary-color;
             z-index: -1;
+            @include mediaQuerySp($spMaxWidth) {
+                width: 98.9%;
+                height: 98.9%;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            }
         }
     }
     
@@ -100,9 +112,13 @@
         }
         &--txt02 {
             position: absolute;
-            width: 5%;
-            top: 50%;
-            right: 0;
+            width: 7%;
+            top: 45%;
+            right: -30px;
+            @include mediaQueryMiddlePc($pcMiddleWidth) {
+                width: 5%;
+                right: 0;
+            }
         }
         &--txt03 {
             position: absolute;
@@ -114,6 +130,7 @@
     }
     
     .info-covid {
+        position: relative;
         display: block;
         max-width: 350px;
         margin: 0 auto;
@@ -129,6 +146,7 @@
         -o-border-radius: 5px;
         border: 2px solid $main-color;
         box-shadow: inset 3px 3px 5px $secondary-color;
+        z-index: 0;
         @include mediaQuerySp($spMaxWidth) {
             max-width: 300px;
             margin: 20px auto 0;
@@ -140,11 +158,17 @@
         max-width: 750px;
         margin: 50px auto 0;
         z-index: 9;
+        @include mediaQueryMiddlePc($pcMiddleWidth) {
+            max-width: 660px;
+        }
         @include mediaQuerySp($spMaxWidth) {
             max-width: 400px;
         }
         @include mediaQuerySpXs($sp-xs-MaxWidth) {
             max-width: 300px;
+        }
+        @include mediaQuerySpXXs($sp-xxs-MaxWidth) {
+            max-width: 240px;
         }
         .slide-img {
             border: 2px solid $main-color;
@@ -229,11 +253,14 @@
     
     .happy-ttl {
         position: absolute;
-        width: 27%;
+        width: 26%;
         height: 100%;
         top: -40%;
-        left: -15.5%;
+        left: -13.5%;
         z-index: -5;
+        @include mediaQueryMiddlePc($pcMiddleWidth) {
+            left: 0;
+        }
         @include mediaQuerySp($spMaxWidth) {
             width: 30%;
             left: 0;
@@ -448,6 +475,9 @@
                 max-width: 500px;
                 right: -30px;
                 top: -45px;
+                @include mediaQueryMiddlePc($pcMiddleWidth) {
+                    right: 0;
+                }
                 @include mediaQuerySp($spMaxWidth) {
                     max-width: 100px;
                     right: 0;
@@ -528,6 +558,9 @@
                 top: -22px;
                 right: -65px;
                 width: 17%;
+                @include mediaQueryMiddlePc($pcMiddleWidth) {
+                    right: 0;
+                }
                 @include mediaQuerySp($spMaxWidth) {
                     top: -38px;
                     right: 0;
@@ -602,6 +635,9 @@
                 width: 13%;
                 top: -32%;
                 left: -6%;
+                @include mediaQueryMiddlePc($pcMiddleWidth) {
+                    left: 0;
+                }
                 @include mediaQuerySp($spMaxWidth) {
                     width: 20%;
                     top: -18%;
@@ -656,6 +692,9 @@
                 width: 20%;
                 top: -115px;
                 left: -100px;
+                @include mediaQueryMiddlePc($pcMiddleWidth) {
+                    left: 0;
+                }
                 @include mediaQuerySp($spMaxWidth) {
                     width: 30%;
                     top: -40%;
@@ -667,6 +706,9 @@
                 width: 13%;
                 bottom: -60px;
                 right: -65px;
+                @include mediaQueryMiddlePc($pcMiddleWidth) {
+                    right: 0;
+                }
                 @include mediaQuerySp($spMaxWidth) {
                     width: 22%;
                     bottom: -48px;
@@ -713,6 +755,9 @@
                 background: url('assets/img/twt-girl.png') no-repeat center;
                 background-size: contain;
                 z-index: 0;
+                @include mediaQueryMiddlePc($pcMiddleWidth) {
+                    right: 0;
+                }
                 @include mediaQuerySp($spMaxWidth) {
                     display: none;
                 }
@@ -846,7 +891,10 @@
             }
             .insta-btn {
                 bottom: unset;
-                top: 50%;
+                top: 56%;
+                @include mediaQuerySp($spMaxWidth) {
+                    top: 50%;
+                }
             }
         }
     }

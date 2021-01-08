@@ -49,6 +49,9 @@ header {
     margin-top: 50px;
     li {
         margin: 0 5px;
+        @include mediaQueryMiddlePc($pcMiddleWidth) {
+            margin: 5px;
+        }
         a {
             display: block;
             padding: 8px 10px;
@@ -67,7 +70,8 @@ header {
             margin-right: 0;
         }
     }
-    @include mediaQuerySp($spMaxWidth) {
-        margin-top: 0;
+    @include mediaQueryMiddlePc($pcMiddleWidth) {
+        justify-content: center;
+        align-items: center;
     }
 }
