@@ -1,4 +1,9 @@
 // ********** header ********** //
+header {
+    position: relative;
+    z-index: 99;
+}
+
 .hd-inner {
     width: 95%;
     margin: 0 auto;
