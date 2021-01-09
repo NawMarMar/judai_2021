@@ -1,1041 +1,1059 @@
-    // ********** common using ********** //
-    .inner {
-        width: 95%;
-        max-width: 1150px;
+// ********** common using ********** //
+.inner {
+    width: 95%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.cmn-ttl {
+    font-family: vdl-logojrblack, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+    color: $main-color;
+    -webkit-text-fill-color: $main-color;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $secondary-color;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    @include mediaQuerySp($spMaxWidth) {
+        font-size: 30px;
+    }
+}
+
+.more-btn {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 200px;
+    padding: 8px 25px;
+    background-color: #e5c54f;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 2px solid #000;
+    -webkit-box-shadow: inset 3px 3px 5px #fff, 3px 3px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 3px 3px 5px #fff, 3px 3px 5px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    font-weight: 600;
+    @include mediaQuerySp($spMaxWidth) {
+        width: 150px;
+        font-size: 14px;
+    }
+}
+
+// ********** top page ********** //
+.main-visual {
+    position: relative;
+    max-width: 1280px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 50px 0 100px;
+    background-color: $main-color;
+    clip-path: polygon(0 0, 100% 4%, 100% 97%, 0% 100%);
+    // background: url('assets/img/mv-bg01.png') no-repeat center;
+    // background-size: 100% 100%;
+    z-index: 99;
+    @include mediaQuerySp($spMaxWidth) {
         margin: 0 auto;
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
-    
-    .cmn-ttl {
-        font-family: vdl-logojrblack, sans-serif;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 48px;
-        text-align: center;
-        color: $main-color;
-        -webkit-text-fill-color: $main-color;
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: $secondary-color;
-        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
-        @include mediaQuerySp($spMaxWidth) {
-            font-size: 30px;
-        }
-    }
-    
-    .more-btn {
+    &:before {
+        content: '';
         position: absolute;
-        bottom: -20px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        width: 200px;
-        padding: 8px 25px;
-        background-color: #e5c54f;
-        border-radius: 5px;
-        text-align: center;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        border: 2px solid #000;
-        -webkit-box-shadow: inset 3px 3px 5px #fff, 3px 3px 5px rgba(0, 0, 0, 0.5);
-        box-shadow: inset 3px 3px 5px #fff, 3px 3px 5px rgba(0, 0, 0, 0.5);
-        font-size: 18px;
-        font-weight: 600;
+        top: 3.5px;
+        left: 3.5px;
+        width: 99.4%;
+        height: 99.2%;
+        background-image: url('assets/img/mv-line.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        clip-path: polygon(0 0, 100% 4%, 100% 97%, 0% 100%);
         @include mediaQuerySp($spMaxWidth) {
-            width: 150px;
-            font-size: 14px;
+            width: 98.9%;
+            height: 98.9%;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            background-image: url('assets/img/mv-line-sp.png');
         }
     }
-    
-    // ********** top page ********** //
-    .main-visual {
-        position: relative;
-        max-width: 1280px;
-        width: 100%;
-        margin: 50px auto;
-        padding: 50px 0 100px;
-        background-color: $main-color;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 99.4%;
+        height: 99.2%;
+        top: 3.5px;
+        left: 3.5px;
         clip-path: polygon(0 0, 100% 4%, 100% 97%, 0% 100%);
-        // background: url('assets/img/mv-bg01.png') no-repeat center;
-        // background-size: 100% 100%;
-        z-index: 99;
+        background-color: $secondary-color;
+        z-index: -1;
         @include mediaQuerySp($spMaxWidth) {
-            margin: 0 auto;
-            background-size: cover;
+            width: 98.9%;
+            height: 98.9%;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }
-        &:before {
-            content: '';
-            position: absolute;
-            top: 3.5px;
-            left: 3.5px;
-            width: 99.4%;
-            height: 99.2%;
-            background-image: url('assets/img/mv-line.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100% 100%;
-            clip-path: polygon(0 0, 100% 4%, 100% 97%, 0% 100%);
-            @include mediaQuerySp($spMaxWidth) {
-                width: 98.9%;
-                height: 98.9%;
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-                background-image: url('assets/img/mv-line-sp.png');
-            }
-        }
-        &:after {
-            content: '';
-            position: absolute;
-            width: 99.4%;
-            height: 99.2%;
-            top: 3.5px;
-            left: 3.5px;
-            clip-path: polygon(0 0, 100% 4%, 100% 97%, 0% 100%);
-            background-color: $secondary-color;
-            z-index: -1;
-            @include mediaQuerySp($spMaxWidth) {
-                width: 98.9%;
-                height: 98.9%;
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            }
-        }
     }
-    
-    .mv-txt {
-        &--txt01 {
-            position: absolute;
-            max-width: 250px;
-            top: 50%;
-            left: 0;
-        }
-        &--txt02 {
-            position: absolute;
-            width: 7%;
-            top: 45%;
-            right: -30px;
-            @include mediaQueryMiddlePc($pcMiddleWidth) {
-                width: 5%;
-                right: 0;
-            }
-        }
-        &--txt03 {
-            position: absolute;
-            width: 16%;
-            bottom: -30px;
-            left: 5%;
-            z-index: 0;
-        }
-    }
-    
-    .info-covid {
-        position: relative;
-        display: block;
-        max-width: 350px;
-        margin: 0 auto;
-        padding: 10px 20px;
-        background-color: #d83752;
-        color: $secondary-color;
-        text-align: center;
-        font-weight: 500;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        border: 2px solid $main-color;
-        box-shadow: inset 3px 3px 5px $secondary-color;
-        z-index: 0;
-        @include mediaQuerySp($spMaxWidth) {
-            max-width: 300px;
-            margin: 20px auto 0;
-            font-size: 12px;
-        }
-    }
-    
-    .slider {
-        max-width: 750px;
-        margin: 50px auto 0;
-        z-index: 9;
-        @include mediaQueryMiddlePc($pcMiddleWidth) {
-            max-width: 660px;
-        }
-        @include mediaQuerySp($spMaxWidth) {
-            max-width: 400px;
-        }
-        @include mediaQuerySpXs($sp-xs-MaxWidth) {
-            max-width: 300px;
-        }
-        @include mediaQuerySpXXs($sp-xxs-MaxWidth) {
-            max-width: 240px;
-        }
-        .slide-img {
-            border: 2px solid $main-color;
-        }
-        .slick-prev,
-        .slick-next {
-            width: 40px;
-            height: 40px;
-            background-color: transparent;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-            @include mediaQuerySp($spMaxWidth) {
-                width: 30px;
-                height: 30px;
-            }
-        }
-        .slick-prev {
-            left: -50px;
-            background: url('assets/img/prev-arrow.svg') no-repeat center;
-            @include mediaQuerySp($spMaxWidth) {
-                left: -32px;
-            }
-        }
-        .slick-next {
-            right: -50px;
-            background: url('assets/img/next-arrow.svg') no-repeat center;
-            @include mediaQuerySp($spMaxWidth) {
-                right: -32px;
-            }
-        }
-        .slick-prev:before {
-            content: "";
-            opacity: 1;
-        }
-        .slick-next:before {
-            content: "";
-            opacity: 1;
-        }
-        .slick-prev:hover,
-        .slick-prev:focus {
-            background: url('assets/img/prev-arrow.svg') no-repeat center;
-        }
-        .slick-next:hover,
-        .slick-next:focus {
-            background: url('assets/img/next-arrow.svg') no-repeat center;
-        }
-        .slick-dots {
-            padding: 12px 0 3px 0;
-            background: url('assets/img/dot-box.png') no-repeat center;
-            bottom: -70px;
-            background-size: contain;
-        }
-        .slick-dots li {
-            margin: 0;
-        }
-        .slick-dots li.slick-active button:before {
-            opacity: 1;
-            background: $main-color;
-        }
-        .slick-dots li button {
-            width: 7px;
-            height: 7px;
-        }
-        .slick-dots li button:before {
-            content: '';
-            width: 7px;
-            height: 7px;
-            font-size: 7px;
-            color: transparent;
-            border: 1px solid #000;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-            opacity: 1;
-        }
-    }
-    
-    .happy-ttl {
+}
+
+.mv-txt {
+    &--txt01 {
         position: absolute;
-        width: 26%;
-        height: 100%;
-        top: -40%;
-        left: -13.5%;
-        z-index: -5;
+        max-width: 250px;
+        top: 50%;
+        left: 0;
+    }
+    &--txt02 {
+        position: absolute;
+        width: 7%;
+        top: 45%;
+        right: -30px;
         @include mediaQueryMiddlePc($pcMiddleWidth) {
-            left: 0;
+            width: 5%;
+            right: 0;
         }
+    }
+    &--txt03 {
+        position: absolute;
+        width: 16%;
+        bottom: -30px;
+        left: 5%;
+        z-index: 0;
+    }
+}
+
+.info-covid {
+    position: relative;
+    display: block;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #d83752;
+    color: $secondary-color;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 2px solid $main-color;
+    box-shadow: inset 3px 3px 5px $secondary-color;
+    z-index: 0;
+    @include mediaQuerySp($spMaxWidth) {
+        max-width: 300px;
+        margin: 20px auto 0;
+        font-size: 12px;
+    }
+}
+
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto 0;
+    z-index: 9;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 0;
+    }
+    @include mediaQueryMiddlePc($pcMiddleWidth) {
+        max-width: 660px;
+    }
+    @include mediaQuerySp($spMaxWidth) {
+        max-width: 400px;
+    }
+    @include mediaQuerySpXs($sp-xs-MaxWidth) {
+        max-width: 300px;
+    }
+    @include mediaQuerySpXXs($sp-xxs-MaxWidth) {
+        max-width: 240px;
+    }
+    .slide-img {
+        border: 2px solid $main-color;
+    }
+    .slick-prev,
+    .slick-next {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
         @include mediaQuerySp($spMaxWidth) {
-            width: 30%;
-            left: 0;
+            width: 30px;
+            height: 30px;
         }
     }
-    
-    .news-wrap {
-        position: relative;
-        margin: 50px 0;
-        z-index: 9;
-        .news-ttl {
-            max-width: 241px;
-            padding: 30px 0;
-            color: $secondary-color;
-            background-color: $main-color;
-            text-align: center;
-            clip-path: polygon(0 0, 100% 14%, 100% 88%, 0% 100%);
-            font-size: 30px;
-            -webkit-text-fill-color: $secondary-color;
-            -webkit-text-stroke-width: 0px;
-            -webkit-text-stroke-color: $secondary-color;
-            @include mediaQuerySp($spMaxWidth) {
-                max-width: 200px;
-                padding: 20px 0;
-                font-size: 22px;
-            }
-        }
-        .news-in {
-            position: relative;
-            padding: 100px 0;
-            background: url('assets/img/news-bg.png') no-repeat center;
-            background-size: 100% 100%;
-            @include mediaQuerySp($spMaxWidth) {
-                background-size: cover;
-            }
-            &:after {
-                content: '';
-                position: absolute;
-                top: -100px;
-                right: 0;
-                max-width: 257px;
-                width: 100%;
-                height: 90%;
-                background: url('assets/img/news-girl.png') no-repeat center;
-                z-index: 0;
-                background-size: contain;
-                @include mediaQuerySp($spMaxWidth) {
-                    max-width: 150px;
-                }
-            }
-        }
-    }
-    
-    .news-box {
-        position: relative;
-        width: 95%;
-        max-width: 1000px;
-        margin: 0 auto;
-        &:before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            background: url('assets/img/news-bg01.png') no-repeat center;
-            background-size: 90%;
-        }
-        .next-btn {
-            display: block;
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            z-index: 9;
-            right: 75px;
-            bottom: 5px;
-            @include mediaQuerySp($spMaxWidth) {
-                width: 30px;
-                height: 30px;
-                z-index: 9;
-                right: 9px;
-                bottom: 7px;
-            }
-        }
-    }
-    
-    .news-detail {
-        position: relative;
-        margin-top: -25px;
-        left: 10px;
-        width: 90%;
-        height: 140px;
-        padding: 30px 50px 30px 100px;
-        background-color: #000;
-        clip-path: polygon(0 0, 100% 7%, 100% 85%, 3% 100%);
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
+    .slick-prev {
+        left: -50px;
+        background: url('assets/img/prev-arrow.svg') no-repeat center;
         @include mediaQuerySp($spMaxWidth) {
-            padding: 30px 20px 30px 40px;
+            left: -32px;
         }
-        &--box {
-            height: 86px;
-            overflow-y: auto;
-            &::-webkit-scrollbar-track {
-                -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
-                border-radius: 10px;
-                background-color: #F5F5F5;
-            }
-            &::-webkit-scrollbar {
-                width: 8px;
-                background-color: #F5F5F5;
-            }
-            &::-webkit-scrollbar-thumb {
-                border-radius: 10px;
-                -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
-                background-color: #b5b5b5;
-                -webkit-border-radius: 10px;
-                -moz-border-radius: 10px;
-                -ms-border-radius: 10px;
-                -o-border-radius: 10px;
-            }
+    }
+    .slick-next {
+        right: -50px;
+        background: url('assets/img/next-arrow.svg') no-repeat center;
+        @include mediaQuerySp($spMaxWidth) {
+            right: -32px;
         }
-        dl {
-            margin-bottom: 15px;
-            font-size: 12px;
-            dt {
-                margin-right: 20px;
-            }
-            &:nth-child(2n) {
-                margin-left: 10px;
-                dt {
-                    margin-right: 10px;
-                }
-            }
-            @include mediaQuerySp($spMaxWidth) {
-                margin-bottom: 5px;
-                font-size: 10px;
-            }
+    }
+    .slick-prev:before {
+        content: "";
+        opacity: 1;
+    }
+    .slick-next:before {
+        content: "";
+        opacity: 1;
+    }
+    .slick-prev:hover,
+    .slick-prev:focus {
+        background: url('assets/img/prev-arrow.svg') no-repeat center;
+    }
+    .slick-next:hover,
+    .slick-next:focus {
+        background: url('assets/img/next-arrow.svg') no-repeat center;
+    }
+    .slick-dots {
+        padding: 12px 0 3px 0;
+        background: url('assets/img/dot-box.png') no-repeat center;
+        bottom: -70px;
+        background-size: contain;
+    }
+    .slick-dots li {
+        margin: 0;
+    }
+    .slick-dots li.slick-active button:before {
+        opacity: 1;
+        background: $main-color;
+    }
+    .slick-dots li button {
+        width: 7px;
+        height: 7px;
+    }
+    .slick-dots li button:before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        font-size: 7px;
+        color: transparent;
+        border: 1px solid #000;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        opacity: 1;
+    }
+}
+
+.happy-ttl {
+    position: absolute;
+    width: 26%;
+    height: 100%;
+    top: -40%;
+    left: -13.5%;
+    z-index: -5;
+    @include mediaQueryMiddlePc($pcMiddleWidth) {
+        left: 0;
+    }
+    @include mediaQuerySp($spMaxWidth) {
+        width: 30%;
+        left: 0;
+    }
+}
+
+.news-wrap {
+    position: relative;
+    margin: 50px 0;
+    z-index: 9;
+    .news-ttl {
+        max-width: 241px;
+        padding: 30px 0;
+        color: $secondary-color;
+        background-color: $main-color;
+        text-align: center;
+        clip-path: polygon(0 0, 100% 14%, 100% 88%, 0% 100%);
+        font-size: 30px;
+        -webkit-text-fill-color: $secondary-color;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: $secondary-color;
+        @include mediaQuerySp($spMaxWidth) {
+            max-width: 200px;
+            padding: 20px 0;
+            font-size: 22px;
+        }
+    }
+    .news-in {
+        position: relative;
+        padding: 100px 0;
+        background: url('assets/img/news-bg.png') no-repeat center;
+        background-size: 100% 100%;
+        @include mediaQuerySp($spMaxWidth) {
+            background-size: cover;
         }
         &:after {
-            position: absolute;
             content: '';
-            top: 2.5px;
-            left: 3px;
-            width: 99.4%;
-            height: 135px;
-            clip-path: polygon(0 0, 100% 7%, 100% 85%, 3% 100%);
-            background-color: #fff;
+            position: absolute;
+            top: -100px;
+            right: 0;
+            max-width: 257px;
+            width: 100%;
+            height: 90%;
+            background: url('assets/img/news-girl.png') no-repeat center;
+            z-index: 0;
+            background-size: contain;
+            @include mediaQuerySp($spMaxWidth) {
+                max-width: 150px;
+            }
+        }
+    }
+}
+
+.news-box {
+    position: relative;
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: url('assets/img/news-bg01.png') no-repeat center;
+        background-size: 90%;
+    }
+    .next-btn {
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        z-index: 9;
+        right: 75px;
+        bottom: 5px;
+        @include mediaQuerySp($spMaxWidth) {
+            width: 30px;
+            height: 30px;
+            z-index: 9;
+            right: 9px;
+            bottom: 7px;
+        }
+    }
+}
+
+.news-detail {
+    position: relative;
+    margin-top: -25px;
+    left: 10px;
+    width: 90%;
+    height: 140px;
+    padding: 30px 50px 30px 100px;
+    background-color: #000;
+    clip-path: polygon(0 0, 100% 7%, 100% 85%, 3% 100%);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    @include mediaQuerySp($spMaxWidth) {
+        padding: 30px 20px 30px 40px;
+    }
+    &--box {
+        height: 86px;
+        overflow-y: auto;
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar {
+            width: 8px;
+            background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+            background-color: #b5b5b5;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+    }
+    dl {
+        margin-bottom: 15px;
+        font-size: 12px;
+        dt {
+            margin-right: 20px;
+        }
+        &:nth-child(2n) {
+            margin-left: 10px;
+            dt {
+                margin-right: 10px;
+            }
+        }
+        @include mediaQuerySp($spMaxWidth) {
+            margin-bottom: 5px;
+            font-size: 10px;
+        }
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        top: 2.5px;
+        left: 3px;
+        width: 99.4%;
+        height: 135px;
+        clip-path: polygon(0 0, 100% 7%, 100% 85%, 3% 100%);
+        background-color: #fff;
+        z-index: -1;
+        @include mediaQuerySp($spMaxWidth) {
+            width: 98.7%;
+        }
+    }
+}
+
+.notice-wrap {
+    .notice-in {
+        position: relative;
+        figure {
+            margin-top: -114px;
+        }
+        .star01 {
+            position: absolute;
+            width: 15%;
+            top: -62px;
+            right: 0;
             z-index: -1;
         }
-    }
-    
-    .notice-wrap {
-        .notice-in {
-            position: relative;
-            figure {
-                margin-top: -114px;
-            }
-            .star01 {
-                position: absolute;
-                width: 15%;
-                top: -62px;
-                right: 0;
-                z-index: -1;
-            }
-            .info-txt01 {
-                position: absolute;
-                max-width: 65px;
-                top: -10px;
-                left: 27%;
-                z-index: 9;
-                @include mediaQuerySp($spMaxWidth) {
-                    max-width: 30px;
-                }
-            }
-            @include mediaQuerySp($spMaxWidth) {
-                width: 100%;
-            }
-        }
-    }
-    
-    .cast-wrap {
-        margin: 50px 0 0;
-        .cast-in {
-            position: relative;
-            padding-bottom: 100px;
-            background: url('assets/img/cast-bg.png') no-repeat center;
-            background-size: 100% 100%;
+        .info-txt01 {
+            position: absolute;
+            max-width: 65px;
+            top: -10px;
+            left: 27%;
             z-index: 9;
             @include mediaQuerySp($spMaxWidth) {
-                background-size: cover;
+                max-width: 30px;
             }
-            .cast-ttl {
-                position: relative;
-                top: -20px;
-                span {
-                    display: inline-block;
-                    max-width: 200px;
-                    position: absolute;
-                    left: 33%;
-                    top: -30px;
-                    z-index: -1;
-                    @include mediaQuerySp($spMaxWidth) {
-                        left: 0;
-                        right: 0;
-                        top: -45px;
-                        margin: 0 auto;
-                    }
-                }
-            }
-            .cast-ico {
+        }
+        @include mediaQuerySp($spMaxWidth) {
+            width: 100%;
+        }
+    }
+}
+
+.cast-wrap {
+    margin: 50px 0 0;
+    .cast-in {
+        position: relative;
+        padding-bottom: 100px;
+        background: url('assets/img/cast-bg.png') no-repeat center;
+        background-size: 100% 100%;
+        z-index: 9;
+        @include mediaQuerySp($spMaxWidth) {
+            background-size: cover;
+        }
+        .cast-ttl {
+            position: relative;
+            top: -20px;
+            span {
+                display: inline-block;
+                max-width: 200px;
                 position: absolute;
-                max-width: 500px;
-                right: -30px;
-                top: -45px;
-                @include mediaQueryMiddlePc($pcMiddleWidth) {
-                    right: 0;
-                }
+                left: 33%;
+                top: -30px;
+                z-index: -1;
                 @include mediaQuerySp($spMaxWidth) {
-                    max-width: 100px;
+                    left: 0;
                     right: 0;
+                    top: -45px;
+                    margin: 0 auto;
                 }
             }
         }
-        .person-list {
-            padding: 0 60px;
+        .cast-ico {
+            position: absolute;
+            max-width: 500px;
+            right: -30px;
+            top: -45px;
+            @include mediaQueryMiddlePc($pcMiddleWidth) {
+                right: 0;
+            }
+            @include mediaQuerySp($spMaxWidth) {
+                max-width: 100px;
+                right: 0;
+            }
+        }
+    }
+    .person-list {
+        padding: 0 60px;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        li {
+            span {
+                display: block;
+                text-align: center;
+                @include mediaQuerySp($spMaxWidth) {
+                    font-size: 12px;
+                }
+            }
+            @include mediaQuerySp($spMaxWidth) {
+                width: 32%;
+                &:nth-child(2) {
+                    width: 28%;
+                }
+            }
+        }
+        @include mediaQuerySp($spMaxWidth) {
+            margin-top: 50px;
+            padding: 0 20px;
+            align-items: flex-start;
+        }
+    }
+    .cast-btn {
+        bottom: 0;
+        @include mediaQuerySp($spMaxWidth) {
+            bottom: 10px;
+        }
+    }
+    @include mediaQuerySp($spMaxWidth) {
+        margin-top: 100px;
+    }
+}
+
+.media-wrap {
+    .media-in {
+        position: relative;
+        padding: 100px 0;
+        background: url('assets/img/media-bg.png') no-repeat center;
+        background-size: 100% 100%;
+        @include mediaQuerySp($spMaxWidth) {
+            padding: 50px 0;
+            background-size: cover;
+        }
+        .media-list {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
             justify-content: space-between;
             align-items: center;
-            box-sizing: border-box;
-            li {
-                span {
-                    display: block;
-                    text-align: center;
-                    @include mediaQuerySp($spMaxWidth) {
-                        font-size: 12px;
-                    }
-                }
-                @include mediaQuerySp($spMaxWidth) {
-                    width: 32%;
-                    &:nth-child(2) {
-                        width: 28%;
-                    }
-                }
-            }
-            @include mediaQuerySp($spMaxWidth) {
-                margin-top: 50px;
-                padding: 0 20px;
-                align-items: flex-start;
+            div {
+                width: 47%;
+                margin-bottom: 20px;
             }
         }
-        .cast-btn {
-            bottom: 0;
+        .girl-ico {
+            position: absolute;
+            max-width: 300px;
+            right: 0;
+            bottom: 45px;
             @include mediaQuerySp($spMaxWidth) {
-                bottom: 10px;
+                max-width: 90px;
+                bottom: 26px;
             }
         }
-        @include mediaQuerySp($spMaxWidth) {
-            margin-top: 100px;
+        .star-ico {
+            position: absolute;
+            max-width: 500px;
+            top: -22px;
+            right: -65px;
+            width: 17%;
+            @include mediaQueryMiddlePc($pcMiddleWidth) {
+                right: 0;
+            }
+            @include mediaQuerySp($spMaxWidth) {
+                top: -38px;
+                right: 0;
+                width: 30%;
+            }
+        }
+        .title01 {
+            position: absolute;
+            width: 36%;
+            bottom: -25%;
+            right: 0;
+            @include mediaQuerySp($spMaxWidth) {
+                width: 50%;
+                bottom: -40%;
+            }
         }
     }
-    
-    .media-wrap {
-        .media-in {
-            position: relative;
-            padding: 100px 0;
-            background: url('assets/img/media-bg.png') no-repeat center;
-            background-size: 100% 100%;
+}
+
+.support-wrap {
+    margin: 100px 0 50px;
+    .support-in {
+        position: relative;
+        width: 90%;
+        max-width: 1050px;
+        padding: 80px;
+        background-color: #99c9c4;
+        border: 3px solid $main-color;
+        box-shadow: 5px 3px $main-color;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        box-sizing: border-box;
+        @include mediaQuerySp($spMaxWidth) {
+            padding: 50px 20px 20px 20px;
+        }
+        .sup-ttl {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
             @include mediaQuerySp($spMaxWidth) {
-                padding: 50px 0;
-                background-size: cover;
+                top: -26px;
             }
-            .media-list {
-                width: 90%;
-                max-width: 800px;
-                margin: 0 auto;
-                justify-content: space-between;
-                align-items: center;
-                div {
-                    width: 47%;
+        }
+        .support-list {
+            justify-content: space-between;
+            align-items: center;
+            .support-logo {
+                width: 22%;
+                @include mediaQuerySp($spMaxWidth) {
+                    width: 48%;
                     margin-bottom: 20px;
                 }
             }
-            .girl-ico {
-                position: absolute;
-                max-width: 300px;
-                right: 0;
-                bottom: 45px;
+        }
+        .girl-ico {
+            position: absolute;
+            width: 10%;
+            top: -64%;
+            left: 12%;
+            @include mediaQuerySp($spMaxWidth) {
+                width: 70px;
+                top: -38%;
+            }
+        }
+        .icon01 {
+            position: absolute;
+            width: 13%;
+            top: -32%;
+            left: -6%;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            @include mediaQueryMiddlePc($pcMiddleWidth) {
+                left: 0;
+            }
+            @include mediaQuerySp($spMaxWidth) {
+                width: 20%;
+                top: -18%;
+                left: 0;
+            }
+        }
+    }
+}
+
+.partner-wrap {
+    margin: 0 0 220px;
+    .partner-in {
+        position: relative;
+        width: 90%;
+        max-width: 1050px;
+        padding: 80px;
+        background-color: #59a7a4;
+        border: 3px solid $main-color;
+        box-shadow: 5px 3px $main-color;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        box-sizing: border-box;
+        @include mediaQuerySp($spMaxWidth) {
+            padding: 50px 20px 20px 20px;
+        }
+        .sup-ttl {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            @include mediaQuerySp($spMaxWidth) {
+                top: -26px;
+            }
+        }
+        .partner-list {
+            justify-content: space-between;
+            align-items: center;
+            .partner-logo {
+                width: 22%;
                 @include mediaQuerySp($spMaxWidth) {
-                    max-width: 90px;
-                    bottom: 26px;
+                    width: 48%;
+                    margin-bottom: 20px;
                 }
             }
-            .star-ico {
-                position: absolute;
-                max-width: 500px;
-                top: -22px;
-                right: -65px;
-                width: 17%;
-                @include mediaQueryMiddlePc($pcMiddleWidth) {
-                    right: 0;
-                }
-                @include mediaQuerySp($spMaxWidth) {
-                    top: -38px;
-                    right: 0;
-                    width: 30%;
-                }
+        }
+        .pat-ico01 {
+            position: absolute;
+            width: 20%;
+            top: -115px;
+            left: -100px;
+            @include mediaQueryMiddlePc($pcMiddleWidth) {
+                left: 0;
             }
-            .title01 {
-                position: absolute;
-                width: 36%;
-                bottom: -25%;
+            @include mediaQuerySp($spMaxWidth) {
+                width: 30%;
+                top: -40%;
+                left: 0;
+            }
+        }
+        .pat-ico02 {
+            position: absolute;
+            width: 13%;
+            bottom: -60px;
+            right: -65px;
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            @include mediaQueryMiddlePc($pcMiddleWidth) {
                 right: 0;
+            }
+            @include mediaQuerySp($spMaxWidth) {
+                width: 22%;
+                bottom: -48px;
+                right: 0;
+            }
+        }
+        .contact-btn {
+            width: 320px;
+            bottom: -80px;
+            @include mediaQuerySp($spMaxWidth) {
+                width: 260px;
+                font-size: 14px;
+            }
+        }
+    }
+    @include mediaQuerySp($spMaxWidth) {
+        margin-bottom: 150px;
+    }
+}
+
+.twiter-wrap {
+    margin-bottom: 80px;
+    @include mediaQuerySp($spMaxWidth) {
+        padding: 20px 0 50px;
+        margin-bottom: 0;
+        background-color: #4ecff2;
+        border: 3px solid $main-color;
+    }
+    .twt-in {
+        position: relative;
+        max-width: 1000px;
+        padding: 250px 0;
+        background: url('assets/img/twtt-bg.png') no-repeat center;
+        background-size: 100% 100%;
+        @include mediaQuerySp($spMaxWidth) {
+            background: unset;
+            padding: 0;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            top: -32%;
+            right: -5%;
+            width: 100%;
+            height: 100%;
+            max-width: 230px;
+            background: url('assets/img/twt-girl.png') no-repeat center;
+            background-size: contain;
+            z-index: 0;
+            @include mediaQueryMiddlePc($pcMiddleWidth) {
+                right: 0;
+            }
+            @include mediaQuerySp($spMaxWidth) {
+                display: none;
+            }
+        }
+        .twt-ttl {
+            text-align: left;
+            position: absolute;
+            top: 13%;
+            left: 14%;
+            z-index: 9;
+            @include mediaQuerySp($spMaxWidth) {
+                text-align: center;
+                top: 2%;
+                left: -20px;
+                right: 0;
+                margin: 0 auto;
+            }
+        }
+        .ang-img {
+            position: absolute;
+            width: 57%;
+            top: 0;
+            @include mediaQuerySp($spMaxWidth) {
+                position: unset;
+                width: 100%;
+                max-width: 900px;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: 50px auto 0;
+            }
+        }
+        .ang-img {
+            position: absolute;
+            width: 42%;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-90%);
+            @include mediaQuerySp($spMaxWidth) {
+                position: relative;
+                width: 70%;
+                max-width: 900px;
+                top: 150px;
+                left: 0;
+                right: 0;
+                margin: 50px auto 0;
+            }
+        }
+        .ang-sm-img-t {
+            position: absolute;
+            top: -7%;
+            left: -0.5%;
+            width: 14%;
+            animation-delay: .3s;
+            animation-name: angry_cloud_t;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            @include mediaQuerySp($spMaxWidth) {
+                top: -6%;
+                left: 7.5%;
+                width: 24%;
+            }
+        }
+        .ang-sm-img-tc {
+            position: absolute;
+            top: -17%;
+            left: 18%;
+            width: 10%;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            animation-delay: .2s;
+            animation-name: angry_cloud_tc;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            @include mediaQuerySp($spMaxWidth) {
+                top: -11%;
+                left: 39%;
+                width: 15%;
+            }
+        }
+    }
+    .ang-sm-img-r {
+        position: absolute;
+        top: -10%;
+        left: 35%;
+        width: 14%;
+        transform: rotate(110deg);
+        -webkit-transform: rotate(110deg);
+        -moz-transform: rotate(110deg);
+        -ms-transform: rotate(110deg);
+        -o-transform: rotate(110deg);
+        animation-delay: .4s;
+        animation-name: angry_cloud_r;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        @include mediaQuerySp($spMaxWidth) {
+            top: -6%;
+            left: 65%;
+            width: 24%;
+        }
+    }
+    .ang-sm-img-rc {
+        position: absolute;
+        top: 23%;
+        left: 40%;
+        width: 18%;
+        transform: rotate(170deg);
+        -webkit-transform: rotate(170deg);
+        -moz-transform: rotate(170deg);
+        -ms-transform: rotate(170deg);
+        -o-transform: rotate(170deg);
+        animation-delay: .5s;
+        animation-name: angry_cloud_rc;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        @include mediaQuerySp($spMaxWidth) {
+            top: 8%;
+            left: 73%;
+            width: 25%;
+        }
+    }
+    .ang-sm-img-bc {
+        position: absolute;
+        top: 46%;
+        left: 25%;
+        width: 8%;
+        transform: rotate(-140deg);
+        -webkit-transform: rotate(-140deg);
+        -moz-transform: rotate(-140deg);
+        -ms-transform: rotate(-140deg);
+        -o-transform: rotate(-140deg);
+        animation-name: angry_cloud_bc;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        @include mediaQuerySp($spMaxWidth) {
+            top: 19%;
+            left: 39%;
+            width: 18%;
+        }
+    }
+    .ang-sm-img-lb {
+        position: absolute;
+        top: 32%;
+        left: 0%;
+        width: 14%;
+        transform: rotate(-60deg);
+        -webkit-transform: rotate(-60deg);
+        -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+        -o-transform: rotate(-60deg);
+        animation-delay: .7s;
+        animation-name: angry_cloud_lb;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        @include mediaQuerySp($spMaxWidth) {
+            top: 13%;
+            left: 3%;
+            width: 24%;
+        }
+    }
+    .twt-btn {
+        top: 29%;
+        right: unset;
+        bottom: unset;
+        left: 15%;
+        @include mediaQuerySp($spMaxWidth) {
+            top: 9%;
+            right: 0;
+            bottom: unset;
+            left: -30px;
+            margin: 0 auto;
+        }
+    }
+    .twt-frame {
+        position: absolute;
+        width: 34%;
+        right: 13.2%;
+        top: -9%;
+        padding: 10px;
+        background-color: #2dbaec;
+        z-index: 1;
+        box-sizing: border-box;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border: 3px solid $main-color;
+        @include mediaQuerySp($spMaxWidth) {
+            position: unset;
+            width: 90%;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            margin: 30px auto 0;
+        }
+    }
+    .twt-feed {
+        height: 550px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar {
+            width: 8px;
+            background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+            background-color: #b5b5b5;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+    }
+}
+
+
+}
+.insta-wrap {
+    .insta-in {
+        position: relative;
+        ul {
+            justify-content: space-between;
+            border: 3px solid $main-color;
+            z-index: 9;
+            li {
+                width: 25%;
                 @include mediaQuerySp($spMaxWidth) {
                     width: 50%;
-                    bottom: -40%;
                 }
-            }
-        }
-    }
-    
-    .support-wrap {
-        margin: 100px 0 50px;
-        .support-in {
-            position: relative;
-            width: 90%;
-            max-width: 1050px;
-            padding: 80px;
-            background-color: #99c9c4;
-            border: 3px solid $main-color;
-            box-shadow: 5px 3px $main-color;
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            box-sizing: border-box;
-            @include mediaQuerySp($spMaxWidth) {
-                padding: 50px 20px 20px 20px;
-            }
-            .sup-ttl {
-                position: absolute;
-                top: -40px;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                @include mediaQuerySp($spMaxWidth) {
-                    top: -26px;
-                }
-            }
-            .support-list {
-                justify-content: space-between;
-                align-items: center;
-                .support-logo {
-                    width: 22%;
-                    @include mediaQuerySp($spMaxWidth) {
-                        width: 48%;
-                        margin-bottom: 20px;
-                    }
-                }
-            }
-            .girl-ico {
-                position: absolute;
-                width: 10%;
-                top: -64%;
-                left: 12%;
-                @include mediaQuerySp($spMaxWidth) {
-                    width: 70px;
-                    top: -38%;
-                }
-            }
-            .icon01 {
-                position: absolute;
-                width: 13%;
-                top: -32%;
-                left: -6%;
-                transform: rotate(-45deg);
-                -webkit-transform: rotate(-45deg);
-                -moz-transform: rotate(-45deg);
-                -ms-transform: rotate(-45deg);
-                -o-transform: rotate(-45deg);
-                @include mediaQueryMiddlePc($pcMiddleWidth) {
-                    left: 0;
-                }
-                @include mediaQuerySp($spMaxWidth) {
-                    width: 20%;
-                    top: -18%;
-                    left: 0;
-                }
-            }
-        }
-    }
-    
-    .partner-wrap {
-        margin: 0 0 150px;
-        .partner-in {
-            position: relative;
-            width: 90%;
-            max-width: 1050px;
-            padding: 80px;
-            background-color: #59a7a4;
-            border: 3px solid $main-color;
-            box-shadow: 5px 3px $main-color;
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            box-sizing: border-box;
-            @include mediaQuerySp($spMaxWidth) {
-                padding: 50px 20px 20px 20px;
-            }
-            .sup-ttl {
-                position: absolute;
-                top: -40px;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                @include mediaQuerySp($spMaxWidth) {
-                    top: -26px;
-                }
-            }
-            .partner-list {
-                justify-content: space-between;
-                align-items: center;
-                .partner-logo {
-                    width: 22%;
-                    @include mediaQuerySp($spMaxWidth) {
-                        width: 48%;
-                        margin-bottom: 20px;
-                    }
-                }
-            }
-            .pat-ico01 {
-                position: absolute;
-                width: 20%;
-                top: -115px;
-                left: -100px;
-                @include mediaQueryMiddlePc($pcMiddleWidth) {
-                    left: 0;
-                }
-                @include mediaQuerySp($spMaxWidth) {
-                    width: 30%;
-                    top: -40%;
-                    left: 0;
-                }
-            }
-            .pat-ico02 {
-                position: absolute;
-                width: 13%;
-                bottom: -60px;
-                right: -65px;
-                transform: rotate(135deg);
-                -webkit-transform: rotate(135deg);
-                -moz-transform: rotate(135deg);
-                -ms-transform: rotate(135deg);
-                -o-transform: rotate(135deg);
-                @include mediaQueryMiddlePc($pcMiddleWidth) {
-                    right: 0;
-                }
-                @include mediaQuerySp($spMaxWidth) {
-                    width: 22%;
-                    bottom: -48px;
-                    right: 0;
-                }
-            }
-            .contact-btn {
-                width: 320px;
-                bottom: -80px;
-                @include mediaQuerySp($spMaxWidth) {
-                    width: 260px;
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-    
-    .twiter-wrap {
-        margin-bottom: 80px;
-        @include mediaQuerySp($spMaxWidth) {
-            padding: 20px 0 50px;
-            margin-bottom: 0;
-            background-color: #4ecff2;
-            border: 3px solid $main-color;
-        }
-        .twt-in {
-            position: relative;
-            max-width: 1000px;
-            padding: 250px 0;
-            background: url('assets/img/twtt-bg.png') no-repeat center;
-            background-size: 100% 100%;
-            @include mediaQuerySp($spMaxWidth) {
-                background: unset;
-                padding: 0;
-            }
-            &:after {
-                position: absolute;
-                content: '';
-                top: -32%;
-                right: -5%;
-                width: 100%;
-                height: 100%;
-                max-width: 230px;
-                background: url('assets/img/twt-girl.png') no-repeat center;
-                background-size: contain;
-                z-index: 0;
-                @include mediaQueryMiddlePc($pcMiddleWidth) {
-                    right: 0;
-                }
-                @include mediaQuerySp($spMaxWidth) {
-                    display: none;
-                }
-            }
-            .twt-ttl {
-                text-align: left;
-                position: absolute;
-                top: 13%;
-                left: 14%;
-                z-index: 9;
-                @include mediaQuerySp($spMaxWidth) {
-                    text-align: center;
-                    top: 2%;
-                    left: -20px;
-                    right: 0;
-                    margin: 0 auto;
-                }
-            }
-            .ang-img {
-                position: absolute;
-                width: 57%;
-                top: 0;
-                @include mediaQuerySp($spMaxWidth) {
-                    position: unset;
-                    width: 100%;
-                    max-width: 900px;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    margin: 50px auto 0;
-                }
-            }
-            .ang-img {
-                position: absolute;
-                width: 42%;
-                top: 50%;
-                left: 50px;
-                transform: translateY(-90%);
-                @include mediaQuerySp($spMaxWidth) {
+                a {
                     position: relative;
-                    width: 70%;
-                    max-width: 900px;
-                    top: 150px;
-                    left: 0;
-                    right: 0;
-                    margin: 50px auto 0;
-                }
-            }
-            .ang-sm-img-t {
-                position: absolute;
-                top: -7%;
-                left: -0.5%;
-                width: 14%;
-                animation-delay: .3s;
-                animation-name: angry_cloud_t;
-                animation-duration: 1s;
-                animation-iteration-count: infinite;
-                @include mediaQuerySp($spMaxWidth) {
-                    top: -6%;
-                    left: 7.5%;
-                    width: 24%;
-                }
-            }
-            .ang-sm-img-tc {
-                position: absolute;
-                top: -17%;
-                left: 18%;
-                width: 10%;
-                transform: rotate(45deg);
-                -webkit-transform: rotate(45deg);
-                -moz-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                -o-transform: rotate(45deg);
-                animation-delay: .2s;
-                animation-name: angry_cloud_tc;
-                animation-duration: 1s;
-                animation-iteration-count: infinite;
-                @include mediaQuerySp($spMaxWidth) {
-                    top: -5%;
-                    left: 39%;
-                    width: 12%;
-                }
-            }
-            .ang-sm-img-r {
-                position: absolute;
-                top: -10%;
-                left: 35%;
-                width: 14%;
-                transform: rotate(110deg);
-                -webkit-transform: rotate(110deg);
-                -moz-transform: rotate(110deg);
-                -ms-transform: rotate(110deg);
-                -o-transform: rotate(110deg);
-                animation-delay: .4s;
-                animation-name: angry_cloud_r;
-                animation-duration: 1s;
-                animation-iteration-count: infinite;
-                @include mediaQuerySp($spMaxWidth) {
-                    top: -6%;
-                    left: 65%;
-                    width: 24%;
-                }
-            }
-            .ang-sm-img-rc {
-                position: absolute;
-                top: 23%;
-                left: 40%;
-                width: 18%;
-                transform: rotate(170deg);
-                -webkit-transform: rotate(170deg);
-                -moz-transform: rotate(170deg);
-                -ms-transform: rotate(170deg);
-                -o-transform: rotate(170deg);
-                animation-delay: .5s;
-                animation-name: angry_cloud_rc;
-                animation-duration: 1s;
-                animation-iteration-count: infinite;
-                @include mediaQuerySp($spMaxWidth) {
-                    top: 8%;
-                    left: 73%;
-                    width: 25%;
-                }
-            }
-            .ang-sm-img-bc {
-                position: absolute;
-                top: 46%;
-                left: 25%;
-                width: 8%;
-                transform: rotate(-140deg);
-                -webkit-transform: rotate(-140deg);
-                -moz-transform: rotate(-140deg);
-                -ms-transform: rotate(-140deg);
-                -o-transform: rotate(-140deg);
-                animation-name: angry_cloud_bc;
-                animation-duration: 1s;
-                animation-iteration-count: infinite;
-                @include mediaQuerySp($spMaxWidth) {
-                    top: 19%;
-                    left: 39%;
-                    width: 18%;
-                }
-            }
-            .ang-sm-img-lb {
-                position: absolute;
-                top: 32%;
-                left: 0%;
-                width: 14%;
-                transform: rotate(-60deg);
-                -webkit-transform: rotate(-60deg);
-                -moz-transform: rotate(-60deg);
-                -ms-transform: rotate(-60deg);
-                -o-transform: rotate(-60deg);
-                animation-delay: .7s;
-                animation-name: angry_cloud_lb;
-                animation-duration: 1s;
-                animation-iteration-count: infinite;
-                @include mediaQuerySp($spMaxWidth) {
-                    top: 13%;
-                    left: 3%;
-                    width: 24%;
-                }
-            }
-            .twt-btn {
-                top: 29%;
-                right: unset;
-                bottom: unset;
-                left: 15%;
-                @include mediaQuerySp($spMaxWidth) {
-                    top: 9%;
-                    right: 0;
-                    bottom: unset;
-                    left: -30px;
-                    margin: 0 auto;
-                }
-            }
-            .twt-frame {
-                position: absolute;
-                width: 34%;
-                right: 13.2%;
-                top: -9%;
-                padding: 10px;
-                background-color: #2dbaec;
-                z-index: 1;
-                box-sizing: border-box;
-                border-radius: 10px;
-                -webkit-border-radius: 10px;
-                -moz-border-radius: 10px;
-                -ms-border-radius: 10px;
-                -o-border-radius: 10px;
-                border: 3px solid $main-color;
-                @include mediaQuerySp($spMaxWidth) {
-                    position: unset;
-                    width: 90%;
-                    right: 0;
-                    top: 0;
-                    z-index: 1;
-                    margin: 30px auto 0;
-                }
-            }
-            .twt-feed {
-                height: 550px;
-                overflow-y: scroll;
-                &::-webkit-scrollbar-track {
-                    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
-                    border-radius: 10px;
-                    background-color: #F5F5F5;
-                }
-                &::-webkit-scrollbar {
-                    width: 8px;
-                    background-color: #F5F5F5;
-                }
-                &::-webkit-scrollbar-thumb {
-                    border-radius: 10px;
-                    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
-                    background-color: #b5b5b5;
-                    -webkit-border-radius: 10px;
-                    -moz-border-radius: 10px;
-                    -ms-border-radius: 10px;
-                    -o-border-radius: 10px;
-                }
-            }
-        }
-    }
-    
-    .insta-wrap {
-        .insta-in {
-            position: relative;
-            ul {
-                justify-content: space-between;
-                border: 3px solid $main-color;
-                z-index: 9;
-                li {
-                    width: 25%;
-                    @include mediaQuerySp($spMaxWidth) {
-                        width: 50%;
-                    }
-                    a {
-                        position: relative;
+                    display: block;
+                    &:after {
+                        content: '';
+                        position: absolute;
                         display: block;
-                        &:after {
-                            content: '';
-                            position: absolute;
-                            display: block;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            background-color: rgba(0, 0, 0, 0.5);
-                            z-index: 0;
-                            overflow: hidden;
-                        }
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        z-index: 0;
+                        overflow: hidden;
                     }
                 }
             }
-            .insta-ttl {
-                position: absolute;
-                top: 43%;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                z-index: 9;
-            }
-            .insta-btn {
-                bottom: unset;
-                top: 56%;
-                @include mediaQuerySp($spMaxWidth) {
-                    top: 50%;
-                }
+        }
+        .insta-ttl {
+            position: absolute;
+            top: 43%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            z-index: 9;
+        }
+        .insta-btn {
+            bottom: unset;
+            top: 56%;
+            @include mediaQuerySp($spMaxWidth) {
+                top: 50%;
             }
         }
     }
+}

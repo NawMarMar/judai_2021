@@ -5,7 +5,7 @@ header {
 }
 
 .hd-inner {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     justify-content: space-between;
     @include mediaQuerySp($spMaxWidth) {
