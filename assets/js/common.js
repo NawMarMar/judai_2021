@@ -12,15 +12,15 @@ $('.slider').slick({
     fade: true,
 });
 // menu
-$('.menu-trigger,.nav-list li a').on('click', function () {
+$('.menu-trigger,.nav-list li a').on('click', function() {
     $('.menu-trigger').toggleClass('active');
     $('body').toggleClass('noscroll');
     $('.nav-list').toggleClass('toggle');
 });
 // go to top
-jQuery(function ($) {
+jQuery(function($) {
     $(".ft-top").hide();
-    $(window).on("scroll", function () {
+    $(window).on("scroll", function() {
         if ($(this).scrollTop() > 600) {
             $(".ft-top").fadeIn("fast");
         } else {
@@ -41,12 +41,12 @@ jQuery(function ($) {
             });
         }
     });
-    // $('.top-btn').click(function() {
-    //     $('body,html').animate({
-    //         scrollTop: 0
-    //     }, 400);
-    //     return false;
-    // });
+    $('.top-btn').click(function() {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
+    });
 });
 
 // openning
@@ -86,7 +86,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-document.onreadystatechange = function (e) {
+document.onreadystatechange = function(e) {
     check_ready_state();
     check_ready_state_ani();
 }
@@ -162,11 +162,11 @@ async function check_ready_state_ani() {
         $('.loading-img').animate({
             'backgroundPositionX': '0%',
             'backgroundPositionY': '0%',
-        }, 100, function () {
+        }, 100, function() {
             $('.loading').css('transition', '1000ms');
-            $('.loading').animate({ opacity: 1 }, 300, function () {
+            $('.loading').animate({ opacity: 1 }, 300, function() {
                 $('.loading').addClass('animate__zoomOut');
-                $('.loading').animate({ opacity: 0 }, 300, function () {
+                $('.loading').animate({ opacity: 0 }, 300, function() {
                     $('.loading').remove();
                     $('body').removeClass('no-scroll');
                 });
@@ -176,7 +176,7 @@ async function check_ready_state_ani() {
 }
 
 async function check_element_ani(ele) {
-    if ($(ele).on()) { } else {
+    if ($(ele).on()) {} else {
         set_ele_ani(ele);
     }
 }
@@ -189,7 +189,7 @@ var instagram = new instagram("IGQVJVblNCR0RKb2xGWjJVQnFueE5zT2t4SlppSkt3a2hvWnF
 
 instagram.user.media({
 
-}, function (res) {
+}, function(res) {
     let format, layout = '';
     for (let i = 0; i < res.length; i++) {
         format = '<li>';
