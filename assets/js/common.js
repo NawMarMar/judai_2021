@@ -12,15 +12,15 @@ $('.slider').slick({
     fade: true,
 });
 // menu
-$('.menu-trigger,.nav-list li a').on('click', function() {
+$('.menu-trigger,.nav-list li a').on('click', function () {
     $('.menu-trigger').toggleClass('active');
     $('body').toggleClass('noscroll');
     $('.nav-list').toggleClass('toggle');
 });
 // go to top
-jQuery(function($) {
+jQuery(function ($) {
     $(".ft-top").hide();
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
         if ($(this).scrollTop() > 600) {
             $(".ft-top").fadeIn("fast");
         } else {
@@ -86,7 +86,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-document.onreadystatechange = function(e) {
+document.onreadystatechange = function (e) {
     check_ready_state();
     check_ready_state_ani();
 }
@@ -96,7 +96,7 @@ async function check_ready_state() {
         var all = document.getElementsByTagName("*");
         for (var i = 0, max = all.length; i < max; i++) {
             set_ele(all[i]);
-            await sleep(10);
+            await sleep(1);
         }
         if (num < 100) {
             for (var j = num; j <= 100; j++) {
@@ -108,7 +108,7 @@ async function check_ready_state() {
                     $('.num').html('' + j);
                 }
                 num++;
-                await sleep(5);
+                await sleep(0.5);
             }
         }
     }
@@ -162,11 +162,11 @@ async function check_ready_state_ani() {
         $('.loading-img').animate({
             'backgroundPositionX': '0%',
             'backgroundPositionY': '0%',
-        }, 100, function() {
+        }, 100, function () {
             $('.loading').css('transition', '1000ms');
-            $('.loading').animate({ opacity: 1 }, 300, function() {
+            $('.loading').animate({ opacity: 1 }, 300, function () {
                 $('.loading').addClass('animate__zoomOut');
-                $('.loading').animate({ opacity: 0 }, 300, function() {
+                $('.loading').animate({ opacity: 0 }, 300, function () {
                     $('.loading').remove();
                     $('body').removeClass('no-scroll');
                 });
@@ -176,7 +176,7 @@ async function check_ready_state_ani() {
 }
 
 async function check_element_ani(ele) {
-    if ($(ele).on()) {} else {
+    if ($(ele).on()) { } else {
         set_ele_ani(ele);
     }
 }
@@ -184,3 +184,18 @@ async function check_element_ani(ele) {
 async function set_ele_ani(set_element) {
     check_element_ani(set_element);
 }
+
+var instagram = new instagram("IGQVJVblNCR0RKb2xGWjJVQnFueE5zT2t4SlppSkt3a2hvWnFzZAXJveHVTV3ptNjdKRWhnV1ZArdzdWSXlZAUVJscGdnZAGhzTm5OWHZAZAaHBHajgwX0E2MV8zMVlGM0hIaEpraDVscmlR");
+
+instagram.user.media({
+
+}, function (res) {
+    let format, layout = '';
+    for (let i = 0; i < res.length; i++) {
+        format = '<li>';
+        format += '<a href="' + res[i]['permalink'] + '" target="_blank"><img src="' + res[i]['media_url'] + '"></a>';
+        format += '</li>';
+        layout += format;
+    }
+    document.querySelector('#instagram-data').innerHTML = layout;
+});

@@ -62,7 +62,9 @@
     // background-size: 100% 100%;
     z-index: 99;
     @include mediaQuerySp($spMaxWidth) {
-        margin: 0 auto;
+        width: 95%;
+        // margin: 0 auto;
+        padding: 30px 0 70px;
         background-size: cover;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
