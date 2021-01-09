@@ -70,6 +70,9 @@
     }
     .noscroll {
         overflow: hidden;
+        .main-visual {
+            height: 100vh;
+        }
     }
     .nav-list {
         display: none;

@@ -17,6 +17,9 @@ header {
 .hd-logo {
     max-width: 175px;
     width: 30%;
+    @include mediaQuerySp($spMaxWidth) {
+        width: 48%;
+    }
     .hd-txt01 {
         display: block;
         margin-bottom: 10px;

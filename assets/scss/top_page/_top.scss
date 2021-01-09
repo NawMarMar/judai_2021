@@ -62,8 +62,7 @@
     // background-size: 100% 100%;
     z-index: 99;
     @include mediaQuerySp($spMaxWidth) {
-        width: 95%;
-        // margin: 0 auto;
+        margin: 0 auto;
         padding: 30px 0 70px;
         background-size: cover;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -175,6 +174,7 @@
     }
     @include mediaQuerySp($spMaxWidth) {
         max-width: 400px;
+        margin: 30px auto;
     }
     @include mediaQuerySpXs($sp-xs-MaxWidth) {
         max-width: 300px;
@@ -505,6 +505,7 @@
         align-items: center;
         box-sizing: border-box;
         li {
+            width: 16%;
             span {
                 display: block;
                 text-align: center;
@@ -512,11 +513,14 @@
                     font-size: 12px;
                 }
             }
-            @include mediaQuerySp($spMaxWidth) {
-                width: 32%;
-                &:nth-child(2) {
+            &:nth-child(2) {
+                width: 14%;
+                @include mediaQuerySp($spMaxWidth) {
                     width: 28%;
                 }
+            }
+            @include mediaQuerySp($spMaxWidth) {
+                width: 32%;
             }
         }
         @include mediaQuerySp($spMaxWidth) {
@@ -761,6 +765,7 @@
         margin-bottom: 0;
         background-color: #4ecff2;
         border: 3px solid $main-color;
+        border-bottom: 0px;
     }
     .twt-in {
         position: relative;
@@ -799,7 +804,7 @@
             @include mediaQuerySp($spMaxWidth) {
                 text-align: center;
                 top: 2%;
-                left: -20px;
+                left: 0;
                 right: 0;
                 margin: 0 auto;
             }
@@ -864,7 +869,7 @@
             animation-duration: 1s;
             animation-iteration-count: infinite;
             @include mediaQuerySp($spMaxWidth) {
-                top: -11%;
+                top: -6%;
                 left: 39%;
                 width: 15%;
             }
@@ -958,7 +963,7 @@
             top: 9%;
             right: 0;
             bottom: unset;
-            left: -30px;
+            left: 0;
             margin: 0 auto;
         }
     }
@@ -1010,8 +1015,6 @@
     }
 }
 
-
-}
 .insta-wrap {
     .insta-in {
         position: relative;
