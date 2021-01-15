@@ -1,13 +1,28 @@
 @include mediaQuerySp($spMaxWidth) {
+    .menu-logo {
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        top: -15%;
+        img {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+    .menu-info-wrap {
+        padding-top: 55%;
+    }
     .menu-trigger {
         display: inline-block;
-        position: relative;
-        top: 0px;
-        right: 20px;
-        width: 45px;
-        height: 45px;
-        background-color: $main-color;
-        border-radius: 50%;
+        position: fixed;
+        top: 20px;
+        right: 0;
+        width: 75px;
+        height: 75px;
+        background: url('assets/img/menu-bg.svg') no-repeat;
+        background-size: contain;
         cursor: pointer;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -18,9 +33,11 @@
         -ms-transition: all .4s;
         -o-transition: all .4s;
         &.active {
+            right: 15px;
+            background: none;
             span {
                 &:nth-of-type(1) {
-                    top: 2px;
+                    top: 3px;
                     -webkit-transform: translateY(20px) rotate(-45deg);
                     transform: translateY(20px) rotate(-45deg);
                     -moz-transform: translateY(20px) rotate(-45deg);
@@ -31,7 +48,7 @@
                     opacity: 0;
                 }
                 &:nth-of-type(3) {
-                    bottom: 2px;
+                    bottom: 30px;
                     -webkit-transform: translateY(-20px) rotate(45deg);
                     transform: translateY(-20px) rotate(45deg);
                     -moz-transform: translateY(-20px) rotate(45deg);
@@ -50,38 +67,38 @@
             box-sizing: border-box;
             z-index: 999;
             position: absolute;
-            left: 0;
+            left: -5px;
             right: 0;
-            width: 50%;
+            width: 45%;
             margin: 0 auto;
             height: 2px;
-            background-color: #fff;
+            background-color: $main-color;
             border-radius: 50px;
             &:nth-of-type(1) {
-                top: 14px;
+                top: 23px;
             }
             &:nth-of-type(2) {
-                top: 21px;
+                top: 30px;
             }
             &:nth-of-type(3) {
-                bottom: 15px;
+                bottom: 35px;
             }
         }
     }
     .noscroll {
         overflow: hidden;
         .main-visual {
-            height: 100vh;
+            z-index: -1;
         }
     }
-    .nav-list {
+    .menu-wrap {
         display: none;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #fff;
+        background-color: #fac623;
         overflow: auto;
         -webkit-transition: background-color 0.5s ease-in-out;
         -moz-transition: background-color 0.5s ease-in-out;
@@ -89,27 +106,107 @@
         z-index: 100;
         margin: 0 auto;
         &.toggle {
+            width: 100%;
             display: block;
-            ul {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
         }
-        ul {
-            width: 55%;
-            margin: 0 auto;
+        .menu-list {
+            width: 80%;
+            margin: 30px auto;
             li {
-                padding: 10px 20px;
+                width: 60%;
+                padding: 0;
                 box-sizing: border-box;
+                &:nth-child(odd) {
+                    margin-left: auto;
+                }
+                &:nth-child(2) {
+                    margin-top: -27px;
+                }
+                &:nth-child(3) {
+                    margin-top: -25px;
+                }
+                &:nth-child(4) {
+                    margin-top: -20px;
+                }
+                &:nth-child(5) {
+                    margin-top: -25px;
+                }
+                &:nth-child(6) {
+                    margin-top: -20px;
+                }
+                &:nth-child(7) {
+                    margin-top: -25px;
+                }
+                &:nth-child(8) {
+                    position: relative;
+                    margin-top: -20px;
+                    z-index: 1;
+                }
+                &:nth-child(9) {
+                    margin-top: -30px;
+                }
                 &:last-child {
                     border-bottom: 0px;
                 }
                 a {
                     display: block;
                     text-align: center;
+                    padding: 0;
+                    border: 0px;
+                    background-color: transparent;
+                    box-shadow: unset;
                 }
+            }
+        }
+        .menu-inc {
+            width: 80%;
+            margin: 0 auto;
+            justify-content: space-between;
+            li {
+                width: 47%;
+                margin: 0 0 20px 0;
+                a {
+                    padding: 12px 10px;
+                    display: block;
+                    border-radius: 5px;
+                    text-align: center;
+                    box-sizing: border-box;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    border: 2px solid $main-color;
+                    box-shadow: inset 3px 3px 5px #fff;
+                    font-weight: 500;
+                }
+                &:nth-child(1) {
+                    a {
+                        background-color: #eb9a5c;
+                    }
+                }
+                &:nth-child(2) {
+                    a {
+                        background-color: #61a9d3;
+                    }
+                }
+                &:nth-child(3) {
+                    a {
+                        background-color: #69ab8a;
+                    }
+                }
+                &:nth-child(4) {
+                    a {
+                        background-color: #f48587;
+                    }
+                }
+            }
+        }
+        .menu-social {
+            width: 80%;
+            margin: 0 auto;
+            justify-content: center;
+            li {
+                width: 15%;
             }
         }
     }
