@@ -2,7 +2,7 @@
     .menu-logo {
         position: absolute;
         width: 100%;
-        height: 80%;
+        height: auto;
         top: -15%;
         img {
             display: block;
@@ -18,7 +18,7 @@
         display: inline-block;
         position: fixed;
         top: 20px;
-        right: 0;
+        right: 1.3%;
         width: 75px;
         height: 75px;
         background: url('assets/img/menu-bg.svg') no-repeat;
@@ -204,6 +204,7 @@
         .menu-social {
             width: 80%;
             margin: 0 auto;
+            padding-bottom: 30px;
             justify-content: center;
             li {
                 width: 15%;

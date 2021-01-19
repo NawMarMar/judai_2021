@@ -11,11 +11,43 @@ $('.slider').slick({
     variableWidth: false,
     fade: true,
 });
+//// slider for cast members
+var $status = $('.cast-numbers');
+var $slickElement = $('.person-list');
+
+$slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
+    //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    $status.text(i + ' / ' + slick.slideCount);
+});
+
+$slickElement.slick({
+    slide: 'li',
+    autoplay: false,
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 1200,
+    variableWidth: false,
+    slidesToShow: 6,
+    slide: 'li',
+    slidesToScroll: 1,
+    accessibility: false,
+    centerPadding: '0',
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+            slidesToShow: 1,
+            centerMode: true,
+            centerPadding: '30%',
+        }
+    }]
+});
 // menu
-$('.menu-trigger,.menu-wrap li a').on('click', function() {
+$('.menu-trigger,.menu-list li a').on('click', function() {
     $('.menu-trigger').toggleClass('active');
     $('body').toggleClass('noscroll');
-    $('.menu-wrap').toggleClass('toggle');
+    $('.menu-list').toggleClass('toggle');
 });
 // go to top
 jQuery(function($) {
@@ -86,7 +118,7 @@ jQuery(function($) {
 //     return new Promise(resolve => setTimeout(resolve, ms));
 // }
 
-// document.onreadystatechange = function (e) {
+// document.onreadystatechange = function(e) {
 //     check_ready_state();
 //     check_ready_state_ani();
 // }
@@ -162,11 +194,11 @@ jQuery(function($) {
 //         $('.loading-img').animate({
 //             'backgroundPositionX': '0%',
 //             'backgroundPositionY': '0%',
-//         }, 100, function () {
+//         }, 100, function() {
 //             $('.loading').css('transition', '1000ms');
-//             $('.loading').animate({ opacity: 1 }, 300, function () {
+//             $('.loading').animate({ opacity: 1 }, 300, function() {
 //                 $('.loading').addClass('animate__zoomOut');
-//                 $('.loading').animate({ opacity: 0 }, 300, function () {
+//                 $('.loading').animate({ opacity: 0 }, 300, function() {
 //                     $('.loading').remove();
 //                     $('body').removeClass('no-scroll');
 //                 });

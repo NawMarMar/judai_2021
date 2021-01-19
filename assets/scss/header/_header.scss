@@ -5,7 +5,7 @@ header {
 }
 
 .hd-inner {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     justify-content: space-between;
     @include mediaQuerySp($spMaxWidth) {
@@ -16,15 +16,20 @@ header {
 }
 
 .hd-logo {
-    max-width: 175px;
-    width: 30%;
+    width: 15%;
     @include mediaQuerySp($spMaxWidth) {
         max-width: 200px;
         width: 50%;
     }
 }
 
+nav {
+    width: 80.5%;
+    margin-left: auto;
+}
+
 .nav-list {
+    width: 100%;
     margin-top: 50px;
     li {
         margin: 0 5px;
@@ -33,7 +38,7 @@ header {
         }
         a {
             display: block;
-            padding: 7px 10px;
+            padding: 7px 15px;
             background-color: #fbc723;
             border-radius: 5px;
             text-align: center;
@@ -42,12 +47,21 @@ header {
             -moz-border-radius: 5px;
             -ms-border-radius: 5px;
             -o-border-radius: 5px;
-            border: 2px solid $main-color;
-            box-shadow: inset 3px 3px 5px #fff;
+            border: 1px solid $main-color;
+            box-shadow: inset 3px 3px 3px #fff;
             font-weight: 500;
         }
-        &:last-child {
+        &:nth-child(9) {
             margin-right: 0;
+        }
+        &:last-child {
+            display: block;
+            width: 100%;
+            margin-top: 40px;
+            margin-left: -10%;
+            a {
+                background-color: #d83752;
+            }
         }
     }
     @include mediaQueryMiddlePc($pcMiddleWidth) {
